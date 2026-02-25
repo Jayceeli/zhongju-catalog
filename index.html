@@ -967,7 +967,328 @@
         width: 3.5rem;
       }
 
+      .manual-page {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.78rem;
+      }
+
+      .manual-page.tight {
+        gap: 0.62rem;
+      }
+
+      .manual-lead {
+        --tone: #9f1515;
+        --tone-soft: #fecaca;
+        --tone-bg: #fff6f6;
+        margin: 0;
+        border: 1px solid #e8ecf2;
+        border-radius: 0.95rem;
+        background: linear-gradient(135deg, var(--tone-bg) 0%, #ffffff 100%);
+        border-left: 4px solid var(--tone);
+        padding: 0.68rem 0.8rem;
+        color: #374151;
+        font-size: 0.64rem;
+        line-height: 1.55;
+      }
+
+      .manual-block {
+        --tone: #9f1515;
+        --tone-soft: #fecaca;
+        --tone-bg: #fff6f6;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.95rem;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .manual-block-head {
+        display: flex;
+        align-items: baseline;
+        gap: 0.35rem;
+        flex-wrap: wrap;
+        padding: 0.54rem 0.72rem;
+        border-bottom: 1px solid #e5e7eb;
+        background: linear-gradient(135deg, var(--tone-bg) 0%, #ffffff 100%);
+      }
+
+      .manual-block-title {
+        margin: 0;
+        font-size: 0.72rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: var(--tone);
+      }
+
+      .manual-block-subtitle {
+        margin: 0;
+        font-size: 0.52rem;
+        line-height: 1.2;
+        color: #6b7280;
+      }
+
+      .manual-block-body {
+        padding: 0.58rem 0.72rem 0.68rem;
+      }
+
+      .manual-card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.56rem;
+      }
+
+      .manual-card-grid.is-three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .manual-card-grid.is-single {
+        grid-template-columns: 1fr;
+      }
+
+      .manual-data-card {
+        --tone: #9f1515;
+        --tone-soft: #fecaca;
+        position: relative;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.8rem;
+        background: #fff;
+        padding: 0.54rem 0.62rem 0.56rem;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+      }
+
+      .manual-data-card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 0.14rem;
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+        background: linear-gradient(90deg, var(--tone) 0%, var(--tone-soft) 100%);
+      }
+
+      .manual-card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.3rem;
+        margin-bottom: 0.28rem;
+      }
+
+      .manual-card-title {
+        margin: 0;
+        font-size: 0.64rem;
+        line-height: 1.25;
+        font-weight: 700;
+        color: #1f2937;
+      }
+
+      .manual-card-tag {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 0.92rem;
+        padding: 0.05rem 0.26rem;
+        border-radius: 999px;
+        border: 1px solid var(--tone-soft);
+        background: var(--tone-bg);
+        color: var(--tone);
+        font-size: 0.47rem;
+        line-height: 1;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .manual-field-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.24rem;
+      }
+
+      .manual-field {
+        padding: 0.26rem 0.32rem;
+        border-radius: 0.52rem;
+        border: 1px solid #edf0f3;
+        background: #fafcff;
+      }
+
+      .manual-field.is-highlight {
+        border-color: var(--tone-soft);
+        background: var(--tone-bg);
+      }
+
+      .manual-field-label {
+        margin: 0;
+        font-size: 0.47rem;
+        line-height: 1.2;
+        color: #6b7280;
+      }
+
+      .manual-field-value {
+        margin: 0.07rem 0 0;
+        font-size: 0.55rem;
+        line-height: 1.3;
+        color: #374151;
+      }
+
+      .manual-meter-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.18rem;
+      }
+
+      .manual-meter-row {
+        display: grid;
+        grid-template-columns: 3.3rem 1fr 1.52rem;
+        align-items: center;
+        gap: 0.24rem;
+      }
+
+      .manual-meter-label {
+        font-size: 0.49rem;
+        line-height: 1.2;
+        color: #475569;
+      }
+
+      .manual-meter-track {
+        position: relative;
+        height: 0.42rem;
+        border-radius: 999px;
+        background: #eef2f7;
+        overflow: hidden;
+      }
+
+      .manual-meter-fill {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--tone-soft) 0%, var(--tone) 100%);
+      }
+
+      .manual-meter-value {
+        font-size: 0.47rem;
+        line-height: 1;
+        text-align: right;
+        color: #6b7280;
+      }
+
+      .manual-note {
+        margin: 0.5rem 0 0;
+        font-size: 0.5rem;
+        line-height: 1.3;
+        color: #9ca3af;
+      }
+
+      .tone-pc {
+        --tone: #1d4ed8;
+        --tone-soft: #bfdbfe;
+        --tone-bg: #eff6ff;
+      }
+
+      .tone-abs {
+        --tone: #0f766e;
+        --tone-soft: #99f6e4;
+        --tone-bg: #ecfeff;
+      }
+
+      .tone-pa {
+        --tone: #0369a1;
+        --tone-soft: #bae6fd;
+        --tone-bg: #f0f9ff;
+      }
+
+      .tone-transparent {
+        --tone: #0e7490;
+        --tone-soft: #a5f3fc;
+        --tone-bg: #ecfeff;
+      }
+
+      .tone-mbs {
+        --tone: #c2410c;
+        --tone-soft: #fdba74;
+        --tone-bg: #fff7ed;
+      }
+
+      .tone-acr {
+        --tone: #7c2d12;
+        --tone-soft: #fcd9bd;
+        --tone-bg: #fff8f3;
+      }
+
+      .tone-nylon {
+        --tone: #166534;
+        --tone-soft: #bbf7d0;
+        --tone-bg: #f0fdf4;
+      }
+
+      .tone-heat {
+        --tone: #be123c;
+        --tone-soft: #fbcfe8;
+        --tone-bg: #fff1f2;
+      }
+
+      .catalog-custom-page {
+        gap: 0.9rem;
+      }
+
+      .catalog-section {
+        border-radius: 1rem;
+        border-color: #e5e7eb;
+      }
+
+      .catalog-section-head {
+        padding: 0.62rem 0.78rem;
+        background: linear-gradient(135deg, var(--tone-bg, #f8fafc) 0%, #ffffff 100%);
+      }
+
+      .catalog-section-title {
+        color: var(--tone, #9f1515);
+      }
+
+      .catalog-section-body {
+        padding: 0.58rem 0.78rem 0.68rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.42rem;
+      }
+
+      .catalog-group {
+        grid-template-columns: 1fr;
+        gap: 0.28rem;
+        padding: 0;
+        border-bottom: 0;
+      }
+
+      .catalog-group-title {
+        display: inline-flex;
+        align-items: center;
+        min-height: 1.2rem;
+        width: fit-content;
+        padding: 0.1rem 0.36rem;
+        border-radius: 999px;
+        border: 1px solid var(--tone-soft, #f0d5d5);
+        background: var(--tone-bg, #fff5f5);
+      }
+
+      .catalog-group-items {
+        gap: 0.36rem;
+      }
+
+      .catalog-chip {
+        min-height: 1.28rem;
+        padding: 0.16rem 0.38rem;
+        border-radius: 0.48rem;
+        font-size: 0.58rem;
+      }
+
       @media (max-width: 1024px) {
+        .manual-card-grid.is-three {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
         .supplier-grid {
           grid-template-columns: repeat(3, minmax(0, 1fr));
         }
@@ -982,6 +1303,27 @@
       }
 
       @media (max-width: 900px) {
+        .manual-card-grid,
+        .manual-card-grid.is-three {
+          grid-template-columns: 1fr;
+        }
+
+        .manual-block-head {
+          padding: 0.48rem 0.58rem;
+        }
+
+        .manual-block-body {
+          padding: 0.52rem 0.58rem 0.6rem;
+        }
+
+        .manual-lead {
+          padding: 0.58rem 0.62rem;
+        }
+
+        .manual-meter-row {
+          grid-template-columns: 2.6rem 1fr 1.45rem;
+        }
+
         .company-kpi-row {
           gap: 0.5rem;
         }
@@ -1041,6 +1383,10 @@
       }
 
       @media print {
+        .manual-data-card {
+          box-shadow: none;
+        }
+
         .company-kpi-chip {
           border-color: #e7d2d2;
           background: #f9efef;
@@ -1095,6 +1441,7 @@
         const page4Sections = [
           {
             title: "PC & PC Alloys",
+            tone: "tone-pc",
             groups: [
               { label: "抗冲改性剂", items: ["EM-500", "M-732", "M-701", "M-722", "M-724", "M-726", "M-711"] },
               { label: "光扩散剂", items: ["KL-200M", "MP-90"] },
@@ -1104,6 +1451,7 @@
           },
           {
             title: "ABS & ASA",
+            tone: "tone-abs",
             groups: [
               { label: "ABS胶粉", items: ["HR-181"] },
               { label: "ASA胶粉", items: ["YH-108", "YH-208", "YH-218", "YH-258"] },
@@ -1117,6 +1465,7 @@
         const page5Sections = [
           {
             title: "PA & PBT",
+            tone: "tone-pa",
             groups: [
               { label: "增韧剂", items: ["AX8900", "SPG20", "M-582"] },
               { label: "PA/ABS相容剂", items: ["MS-NB"] },
@@ -1125,6 +1474,7 @@
           },
           {
             title: "PMMA & PLA & PETG",
+            tone: "tone-transparent",
             groups: [
               { label: "PMMA透明增韧", items: ["M210", "M230", "M240", "MCI800"] },
               { label: "PLA透明增韧", items: ["FM50"] },
@@ -1516,6 +1866,81 @@
             .replace(/\"/g, "&quot;")
             .replace(/'/g, "&#39;");
 
+        const renderDataField = (label, value, isHighlight = false) => `
+          <div class="manual-field${isHighlight ? " is-highlight" : ""}">
+            <p class="manual-field-label">${escapeHtml(label)}</p>
+            <p class="manual-field-value">${escapeHtml(value)}</p>
+          </div>
+        `;
+
+        const renderRowCard = ({
+          row,
+          headers,
+          titleIndex = 0,
+          tagIndex = null,
+          toneClass = "",
+          highlightIndices = []
+        }) => {
+          const skipped = new Set([titleIndex]);
+          if (tagIndex !== null) skipped.add(tagIndex);
+
+          const fields = headers
+            .map((label, idx) => {
+              if (skipped.has(idx)) return "";
+              const value = row[idx] ?? "";
+              return renderDataField(label, value, highlightIndices.includes(idx));
+            })
+            .join("");
+
+          return `
+            <section class="manual-data-card ${toneClass}">
+              <div class="manual-card-head">
+                <h4 class="manual-card-title">${escapeHtml(row[titleIndex] ?? "")}</h4>
+                ${tagIndex !== null ? `<span class="manual-card-tag">${escapeHtml(row[tagIndex] ?? "")}</span>` : ""}
+              </div>
+              <div class="manual-field-grid">
+                ${fields}
+              </div>
+            </section>
+          `;
+        };
+
+        const renderRowCards = ({
+          rows,
+          headers,
+          titleIndex = 0,
+          tagIndex = null,
+          toneClass = "",
+          highlightIndices = []
+        }) =>
+          rows
+            .map((row) =>
+              renderRowCard({
+                row,
+                headers,
+                titleIndex,
+                tagIndex,
+                toneClass,
+                highlightIndices
+              })
+            )
+            .join("");
+
+        const renderScoreMeter = (label, score) => {
+          const value = Number(score) || 0;
+          const safe = Math.max(0, Math.min(5, value));
+          const width = safe * 20;
+          return `
+            <div class="manual-meter-row">
+              <span class="manual-meter-label">${escapeHtml(label)}</span>
+              <div class="manual-meter-track">
+                <div class="manual-meter-fill" style="width:${width}%"></div>
+              </div>
+              <span class="manual-meter-value">${safe}/5</span>
+            </div>
+          `;
+        };
+
         const getCurrentPageNumber = () => {
           const marker = document.querySelector("header .text-lg.font-bold.text-red-600");
           if (!marker) return null;
@@ -1617,6 +2042,7 @@
         };
 
         const renderCatalogSection = (section) => {
+          const tone = section.tone || "tone-pc";
           const groups = section.groups
             .map((group) => {
               const itemsHtml = group.items.length
@@ -1632,7 +2058,7 @@
             .join("");
 
           return `
-            <section class="catalog-section">
+            <section class="catalog-section ${tone}">
               <div class="catalog-section-head">
                 <h3 class="catalog-section-title">${escapeHtml(section.title)}</h3>
                 <p class="catalog-section-subtitle">Product category matrix</p>
@@ -1657,7 +2083,7 @@
           body.dataset.customCatalog = config.key;
 
           body.innerHTML = `
-            <div class="catalog-custom-page">
+            <div class="catalog-custom-page manual-page tight">
               ${config.sections.map((section) => renderCatalogSection(section)).join("")}
             </div>
           `;
@@ -1720,19 +2146,6 @@
           `;
         };
 
-        const renderGradientCell = (score) => {
-          const val = Number(score) || 0;
-          const width = Math.max(0, Math.min(5, val)) * 20;
-          return `
-            <div class="mbs7-grade-cell">
-              <div class="mbs7-gradient-track">
-                <div class="mbs7-gradient-bar" style="width:${width}%"></div>
-              </div>
-              <span class="mbs7-grade-score">${val}/5</span>
-            </div>
-          `;
-        };
-
         const patchMbsComparePage = (page) => {
           const body = page.querySelector(".flex-1");
           if (!body) return;
@@ -1742,109 +2155,91 @@
           if (headerTitle) headerTitle.textContent = "MBS牌号速览与物性梯度对比";
           if (headerSubtitle) headerSubtitle.textContent = "Quick View, Gradient Comparison & Scenario Recommendation";
 
-          if (body.dataset.customMbsCompare === "mbs-compare-v3") return;
-          body.dataset.customMbsCompare = "mbs-compare-v3";
+          if (body.dataset.customMbsCompare === "mbs-compare-v4") return;
+          body.dataset.customMbsCompare = "mbs-compare-v4";
 
-          const quickRows = mbsQuickGrades
+          const quickCards = mbsQuickGrades
             .map(
               (item) => `
-                <tr>
-                  <td>${escapeHtml(item.brand)}</td>
-                  <td>${escapeHtml(item.grade)}</td>
-                  <td>${escapeHtml(item.position)}</td>
-                  <td>${escapeHtml(item.app)}</td>
-                </tr>
+                <section class="manual-data-card tone-mbs">
+                  <div class="manual-card-head">
+                    <h4 class="manual-card-title">${escapeHtml(item.grade)}</h4>
+                    <span class="manual-card-tag">${escapeHtml(item.brand)}</span>
+                  </div>
+                  <div class="manual-field-grid">
+                    ${renderDataField("定位", item.position, true)}
+                    ${renderDataField("推荐应用", item.app)}
+                  </div>
+                </section>
               `
             )
             .join("");
 
-          const gradientHead = mbsGradientMetrics.map((item) => `<th>${escapeHtml(item)}</th>`).join("");
-          const gradientRows = mbsGradientRows
+          const gradientCards = mbsGradientRows
             .map(
               (row) => `
-                <tr class="mbs7-gradient-row">
-                  <td>${escapeHtml(row.grade)}</td>
-                  ${row.scores.map((score) => `<td>${renderGradientCell(score)}</td>`).join("")}
-                </tr>
+                <section class="manual-data-card tone-mbs">
+                  <div class="manual-card-head">
+                    <h4 class="manual-card-title">${escapeHtml(row.grade)}</h4>
+                    <span class="manual-card-tag">PC/ABS</span>
+                  </div>
+                  <div class="manual-meter-list">
+                    ${mbsGradientMetrics.map((metric, idx) => renderScoreMeter(metric, row.scores[idx])).join("")}
+                  </div>
+                </section>
               `
             )
             .join("");
 
-          const scenarioRows = mbsScenarioRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const scenarioCards = renderRowCards({
+            rows: mbsScenarioRows,
+            headers: ["客户场景", "推荐牌号", "推荐理由"],
+            titleIndex: 0,
+            tagIndex: 1,
+            toneClass: "tone-mbs",
+            highlightIndices: [1]
+          });
 
           body.innerHTML = `
-            <div class="mbs7-page">
-              <section class="mbs7-card">
-                <div class="mbs7-card-head">
-                  <h3 class="mbs7-card-title">重点牌号速览</h3>
-                  <p class="mbs7-card-subtitle">Key grade matrix</p>
+            <div class="manual-page">
+              <p class="manual-lead tone-mbs">
+                本页将MBS重点牌号、相对性能梯度和应用场景拆分为卡片展示，便于快速浏览、横向对比与移动端阅读。
+              </p>
+
+              <section class="manual-block tone-mbs">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">重点牌号速览</h3>
+                  <p class="manual-block-subtitle">Key grade matrix</p>
                 </div>
-                <div class="mbs7-body">
-                  <table class="mbs7-table">
-                    <thead>
-                      <tr>
-                        <th>品牌</th>
-                        <th>牌号</th>
-                        <th>定位</th>
-                        <th>推荐应用</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${quickRows}
-                    </tbody>
-                  </table>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${quickCards}
+                  </div>
                 </div>
               </section>
 
-              <section class="mbs7-card">
-                <div class="mbs7-card-head">
-                  <h3 class="mbs7-card-title">PC/ABS 物性梯度对比（相对）</h3>
-                  <p class="mbs7-card-subtitle">红色越深、条越长表示相对表现越优</p>
+              <section class="manual-block tone-mbs">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">PC/ABS 物性梯度对比（相对）</h3>
+                  <p class="manual-block-subtitle">红色越深、条越长表示相对表现越优</p>
                 </div>
-                <div class="mbs7-body">
-                  <table class="mbs7-table">
-                    <thead>
-                      <tr>
-                        <th>牌号</th>
-                        ${gradientHead}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${gradientRows}
-                    </tbody>
-                  </table>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${gradientCards}
+                  </div>
                 </div>
               </section>
 
-              <section class="mbs7-card">
-                <div class="mbs7-card-head">
-                  <h3 class="mbs7-card-title">场景推荐</h3>
-                  <p class="mbs7-card-subtitle">Application recommendation</p>
+              <section class="manual-block tone-mbs">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">场景推荐</h3>
+                  <p class="manual-block-subtitle">Application recommendation</p>
                 </div>
-                <div class="mbs7-body">
-                  <table class="mbs7-table mbs7-reco-table">
-                    <thead>
-                      <tr>
-                        <th>客户场景</th>
-                        <th>推荐牌号</th>
-                        <th>推荐理由</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${scenarioRows}
-                    </tbody>
-                  </table>
-                  <p class="mbs-compare-note">注：梯度为相对评级（5级最高），用于选型方向判断；量产前请按目标配方做打样复测。</p>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${scenarioCards}
+                  </div>
+                  <p class="manual-note">注：梯度为相对评级（5级最高），用于选型方向判断；量产前请按目标配方做打样复测。</p>
                 </div>
               </section>
             </div>
@@ -1891,104 +2286,84 @@
           const gradeCards = acrGradeCards
             .map(
               (item) => `
-                <section class="acr8-grade-card">
-                  <div class="acr8-grade-head">
-                    <h3 class="acr8-grade-name">${escapeHtml(item.grade)}</h3>
-                    <span class="acr8-grade-tag">${escapeHtml(item.tag)}</span>
+                <section class="manual-data-card tone-acr">
+                  <div class="manual-card-head">
+                    <h4 class="manual-card-title">${escapeHtml(item.grade)}</h4>
+                    <span class="manual-card-tag">${escapeHtml(item.tag)}</span>
                   </div>
-                  <p>${escapeHtml(item.summary)}</p>
-                  <p style="margin-top:0.2rem;"><strong>PC：</strong>${escapeHtml(item.pc)}</p>
-                  <p style="margin-top:0.16rem;"><strong>PC/PBT：</strong>${escapeHtml(item.pbt)}</p>
+                  <div class="manual-field-grid">
+                    ${renderDataField("核心定位", item.summary, true)}
+                    ${renderDataField("PC应用", item.pc)}
+                    ${renderDataField("PC/PBT应用", item.pbt)}
+                  </div>
                 </section>
               `
             )
             .join("");
 
-          const pcRows = acrPcCompareRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                  <td>${escapeHtml(row[3])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const pcCards = renderRowCards({
+            rows: acrPcCompareRows,
+            headers: ["指标", "M577", "FM40", "结论"],
+            titleIndex: 0,
+            toneClass: "tone-acr",
+            highlightIndices: [3]
+          });
 
-          const pbtRows = acrPbtScenarioRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                  <td>${escapeHtml(row[3])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const pbtCards = renderRowCards({
+            rows: acrPbtScenarioRows,
+            headers: ["应用场景", "M577表现", "FM40表现", "选型建议"],
+            titleIndex: 0,
+            toneClass: "tone-acr",
+            highlightIndices: [3]
+          });
 
           const pageHtml = `
-            <div class="acr8-page">
-              <div class="acr8-lead">
+            <div class="manual-page">
+              <p class="manual-lead tone-acr">
                 M577与FM40均为钟渊ACR路线的工程塑料增韧剂。M577定位为FM40升级型号，强调冲击、耐热和低黄变；
                 FM40定位通用增韧，强调导入效率和工艺友好。以下内容聚焦其在PC与PC/PBT体系中的应用与性能差异。
-              </div>
+              </p>
 
-              <div class="acr8-grade-grid">
-                ${gradeCards}
-              </div>
-
-              <section class="acr8-section">
-                <div class="acr8-section-head">
-                  <h3 class="acr8-section-title">PC体系关键数据（5%添加）</h3>
-                  <p class="acr8-section-subtitle">M577 vs FM40</p>
+              <section class="manual-block tone-acr">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">牌号定位</h3>
+                  <p class="manual-block-subtitle">M577 / FM40</p>
                 </div>
-                <div class="acr8-section-body">
-                  <table class="acr8-table">
-                    <thead>
-                      <tr>
-                        <th>指标</th>
-                        <th>M577</th>
-                        <th>FM40</th>
-                        <th>结论</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${pcRows}
-                    </tbody>
-                  </table>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${gradeCards}
+                  </div>
                 </div>
               </section>
 
-              <section class="acr8-section">
-                <div class="acr8-section-head">
-                  <h3 class="acr8-section-title">PC/PBT应用建议</h3>
-                  <p class="acr8-section-subtitle">Application recommendation</p>
+              <section class="manual-block tone-acr">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">PC体系关键数据（5%添加）</h3>
+                  <p class="manual-block-subtitle">M577 vs FM40</p>
                 </div>
-                <div class="acr8-section-body">
-                  <table class="acr8-table">
-                    <thead>
-                      <tr>
-                        <th>应用场景</th>
-                        <th>M577表现</th>
-                        <th>FM40表现</th>
-                        <th>选型建议</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${pbtRows}
-                    </tbody>
-                  </table>
-                  <p class="acr-note">注：PC/PBT表现为工程选型导向，具体数据请按目标配方与加工条件复测确认。</p>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${pcCards}
+                  </div>
+                </div>
+              </section>
+
+              <section class="manual-block tone-acr">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">PC/PBT应用建议</h3>
+                  <p class="manual-block-subtitle">Application recommendation</p>
+                </div>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${pbtCards}
+                  </div>
+                  <p class="manual-note">注：PC/PBT表现为工程选型导向，具体数据请按目标配方与加工条件复测确认。</p>
                 </div>
               </section>
             </div>
           `;
 
-          renderOverlayPage(body, "acr8-overlay", "acr-page-8-v2", pageHtml);
+          renderOverlayPage(body, "acr8-overlay", "acr-page-8-v3", pageHtml);
         };
 
         const patchTransparentTougheningPage = (page) => {
@@ -2000,103 +2375,86 @@
           if (headerTitle) headerTitle.textContent = "透明材料增韧：MBS & ACR";
           if (headerSubtitle) headerSubtitle.textContent = "PMMA / PLA / PETG Solutions";
 
-          const routeRows = transparentRouteRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                  <td>${escapeHtml(row[3])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const routeCards = renderRowCards({
+            rows: transparentRouteRows,
+            headers: ["路线", "优势", "关注点", "典型应用"],
+            titleIndex: 0,
+            toneClass: "tone-transparent",
+            highlightIndices: [1]
+          });
 
           const gradeCards = transparentGradeCards
             .map(
               (item) => `
-                <section class="acr9-grade-card">
-                  <div class="acr9-grade-head">
-                    <h3 class="acr9-grade-name">${escapeHtml(item.grade)}</h3>
-                    <span class="acr9-grade-tag">${escapeHtml(item.tag)}</span>
+                <section class="manual-data-card tone-transparent">
+                  <div class="manual-card-head">
+                    <h4 class="manual-card-title">${escapeHtml(item.grade)}</h4>
+                    <span class="manual-card-tag">${escapeHtml(item.tag)}</span>
                   </div>
-                  <p>${escapeHtml(item.desc)}</p>
+                  <div class="manual-field-grid">
+                    ${renderDataField("说明", item.desc, true)}
+                  </div>
                 </section>
               `
             )
             .join("");
 
-          const scenarioRows = transparentScenarioRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const scenarioCards = renderRowCards({
+            rows: transparentScenarioRows,
+            headers: ["客户场景", "推荐牌号", "推荐理由"],
+            titleIndex: 0,
+            tagIndex: 1,
+            toneClass: "tone-transparent",
+            highlightIndices: [2]
+          });
 
           const pageHtml = `
-            <div class="acr9-page">
-              <div class="acr9-lead">
+            <div class="manual-page">
+              <p class="manual-lead tone-transparent">
                 透明材料增韧通常采用MBS与ACR两条路线：MBS侧重冲击效率，ACR更强调透明保持与耐候稳定。
                 本页聚焦透明应用中的重点牌号：PMMA（M210/M230/MCI800）、PLA（FM50）、PETG（M300）。
-              </div>
+              </p>
 
-              <section class="acr9-section">
-                <div class="acr9-section-head">
-                  <h3 class="acr9-section-title">透明增韧路线对比</h3>
-                  <p class="acr9-section-subtitle">MBS vs ACR</p>
+              <section class="manual-block tone-transparent">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">透明增韧路线对比</h3>
+                  <p class="manual-block-subtitle">MBS vs ACR</p>
                 </div>
-                <div class="acr9-section-body">
-                  <table class="acr9-table acr9-route-table">
-                    <thead>
-                      <tr>
-                        <th>路线</th>
-                        <th>优势</th>
-                        <th>关注点</th>
-                        <th>典型应用</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${routeRows}
-                    </tbody>
-                  </table>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${routeCards}
+                  </div>
                 </div>
               </section>
 
-              <div class="acr9-grade-grid">
-                ${gradeCards}
-              </div>
-
-              <section class="acr9-section">
-                <div class="acr9-section-head">
-                  <h3 class="acr9-section-title">场景推荐</h3>
-                  <p class="acr9-section-subtitle">Transparent material recommendation</p>
+              <section class="manual-block tone-transparent">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">重点牌号卡片</h3>
+                  <p class="manual-block-subtitle">PMMA / PLA / PETG</p>
                 </div>
-                <div class="acr9-section-body">
-                  <table class="acr9-table acr9-scenario-table">
-                    <thead>
-                      <tr>
-                        <th>客户场景</th>
-                        <th>推荐牌号</th>
-                        <th>推荐理由</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${scenarioRows}
-                    </tbody>
-                  </table>
-                  <p class="acr-note">注：透明体系对树脂本体、分散工艺和干燥条件敏感，建议按目标光学指标进行小试与放大验证。</p>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${gradeCards}
+                  </div>
+                </div>
+              </section>
+
+              <section class="manual-block tone-transparent">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">场景推荐</h3>
+                  <p class="manual-block-subtitle">Transparent material recommendation</p>
+                </div>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${scenarioCards}
+                  </div>
+                  <p class="manual-note">注：透明体系对树脂本体、分散工艺和干燥条件敏感，建议按目标光学指标进行小试与放大验证。</p>
                 </div>
               </section>
             </div>
           `;
 
-          renderOverlayPage(body, "acr9-overlay", "acr-page-9-v2", pageHtml);
+          renderOverlayPage(body, "acr9-overlay", "acr-page-9-v3", pageHtml);
         };
 
         const patchNylonPbtPage = (page) => {
@@ -2108,113 +2466,87 @@
           if (headerTitle) headerTitle.textContent = "PA66再生系列产品";
           if (headerSubtitle) headerSubtitle.textContent = "Recycled PA66 Portfolio + Nylon/PBT Modification";
 
-          const recycledRows = ny10RecycledRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                  <td>${escapeHtml(row[3])}</td>
-                  <td>${escapeHtml(row[4])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const recycledCards = renderRowCards({
+            rows: ny10RecycledRows,
+            headers: ["牌号", "类型", "外观", "关键数据", "典型应用"],
+            titleIndex: 0,
+            tagIndex: 1,
+            toneClass: "tone-nylon",
+            highlightIndices: [3]
+          });
 
           const modifierCards = ny10ModifierCards
             .map(
               (item) => `
-                <section class="ny10-chip-card">
-                  <div class="ny10-chip-head">
-                    <h3 class="ny10-chip-name">${escapeHtml(item.name)}</h3>
-                    <span class="ny10-chip-tag">${escapeHtml(item.tag)}</span>
+                <section class="manual-data-card tone-nylon">
+                  <div class="manual-card-head">
+                    <h4 class="manual-card-title">${escapeHtml(item.name)}</h4>
+                    <span class="manual-card-tag">${escapeHtml(item.tag)}</span>
                   </div>
-                  <p>${escapeHtml(item.desc)}</p>
+                  <div class="manual-field-grid">
+                    ${renderDataField("说明", item.desc, true)}
+                  </div>
                 </section>
               `
             )
             .join("");
 
-          const solutionRows = ny10SolutionRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const solutionCards = renderRowCards({
+            rows: ny10SolutionRows,
+            headers: ["客户需求", "推荐组合", "方案重点"],
+            titleIndex: 0,
+            tagIndex: 1,
+            toneClass: "tone-nylon",
+            highlightIndices: [2]
+          });
 
           const pageHtml = `
-            <div class="ny10-page">
-              <div class="ny10-lead">
+            <div class="manual-page">
+              <p class="manual-lead tone-nylon">
                 本页以PA66再生系列为主，汇总FMT-210/FMT-220/FMT-230的定位与关键信息。
                 余下版面整合尼龙/PBT改性常用助剂（AX8900、SPG20）及高莱有机黑色母，方便一页完成选型沟通。
-              </div>
+              </p>
 
-              <section class="ny10-card">
-                <div class="ny10-card-head">
-                  <h3 class="ny10-card-title">PA66再生系列总览</h3>
-                  <p class="ny10-card-subtitle">FMT-210 / FMT-220 / FMT-230</p>
+              <section class="manual-block tone-nylon">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">PA66再生系列总览</h3>
+                  <p class="manual-block-subtitle">FMT-210 / FMT-220 / FMT-230</p>
                 </div>
-                <div class="ny10-card-body">
-                  <table class="ny10-table">
-                    <thead>
-                      <tr>
-                        <th>牌号</th>
-                        <th>类型</th>
-                        <th>外观</th>
-                        <th>关键数据</th>
-                        <th>典型应用</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${recycledRows}
-                    </tbody>
-                  </table>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${recycledCards}
+                  </div>
                 </div>
               </section>
 
-              <section class="ny10-card">
-                <div class="ny10-card-head">
-                  <h3 class="ny10-card-title">增韧与着色助剂介绍</h3>
-                  <p class="ny10-card-subtitle">AX8900 / SPG20 / 高莱有机黑色母</p>
+              <section class="manual-block tone-nylon">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">增韧与着色助剂介绍</h3>
+                  <p class="manual-block-subtitle">AX8900 / SPG20 / 高莱有机黑色母</p>
                 </div>
-                <div class="ny10-card-body">
-                  <div class="ny10-chip-grid">
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
                     ${modifierCards}
                   </div>
                 </div>
               </section>
 
-              <section class="ny10-card">
-                <div class="ny10-card-head">
-                  <h3 class="ny10-card-title">推荐组合方案</h3>
-                  <p class="ny10-card-subtitle">Nylon & PBT formulation direction</p>
+              <section class="manual-block tone-nylon">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">推荐组合方案</h3>
+                  <p class="manual-block-subtitle">Nylon & PBT formulation direction</p>
                 </div>
-                <div class="ny10-card-body">
-                  <table class="ny10-table">
-                    <thead>
-                      <tr>
-                        <th>客户需求</th>
-                        <th>推荐组合</th>
-                        <th>方案重点</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${solutionRows}
-                    </tbody>
-                  </table>
-                  <p class="ny10-note">注：推荐组合为方向性建议，量产前请按目标树脂与加工条件进行配方验证。</p>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${solutionCards}
+                  </div>
+                  <p class="manual-note">注：推荐组合为方向性建议，量产前请按目标树脂与加工条件进行配方验证。</p>
                 </div>
               </section>
             </div>
           `;
 
-          renderOverlayPage(body, "ny10-overlay", "ny10-page-v1", pageHtml);
+          renderOverlayPage(body, "ny10-overlay", "ny10-page-v2", pageHtml);
         };
 
         const patchMergedPage11 = (page) => {
@@ -2264,18 +2596,13 @@
             )
             .join("");
 
-          const benchmarkRows = heat13BenchmarkRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                  <td>${escapeHtml(row[3])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const benchmarkCards = renderRowCards({
+            rows: heat13BenchmarkRows,
+            headers: ["比较项", "Denka IP", "AMSAN", "结论"],
+            titleIndex: 0,
+            toneClass: "tone-heat",
+            highlightIndices: [1, 3]
+          });
 
           const visualCards = heat13VisualCards
             .map(
@@ -2298,189 +2625,120 @@
             )
             .join("");
 
-          const applicationRows = heat13ApplicationRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                  <td>${escapeHtml(row[3])}</td>
-                  <td>${escapeHtml(row[4])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const applicationCards = renderRowCards({
+            rows: heat13ApplicationRows,
+            headers: ["应用方向", "典型产品", "推荐牌号", "建议添加量", "技术要点"],
+            titleIndex: 0,
+            tagIndex: 2,
+            toneClass: "tone-heat",
+            highlightIndices: [3]
+          });
 
-          const propertyRows = heat13PropertyRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const propertyCards = renderRowCards({
+            rows: heat13PropertyRows,
+            headers: ["知识库关键参数", "数据", "来源/方法"],
+            titleIndex: 0,
+            toneClass: "tone-heat",
+            highlightIndices: [1]
+          });
 
-          const gradeDiffRows = heat13GradeDiffRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                  <td>${escapeHtml(row[3])}</td>
-                  <td>${escapeHtml(row[4])}</td>
-                  <td>${escapeHtml(row[5])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const gradeDiffCards = renderRowCards({
+            rows: heat13GradeDiffRows,
+            headers: ["牌号", "形态", "Tg", "MFR", "定位", "推荐场景"],
+            titleIndex: 0,
+            tagIndex: 1,
+            toneClass: "tone-heat",
+            highlightIndices: [4]
+          });
 
-          const decisionRows = heat13DecisionRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                  <td>${escapeHtml(row[3])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const decisionCards = renderRowCards({
+            rows: heat13DecisionRows,
+            headers: ["需求特征", "优先牌号", "备选牌号", "判断依据"],
+            titleIndex: 0,
+            tagIndex: 1,
+            toneClass: "tone-heat",
+            highlightIndices: [3]
+          });
 
           const gradeCards = heat13GradeCards
             .map(
               (item) => `
-                <section class="heat-chip">
-                  <h4>${escapeHtml(item.name)} · ${escapeHtml(item.tag)}</h4>
-                  <p>${escapeHtml(item.desc)}</p>
+                <section class="manual-data-card tone-heat">
+                  <div class="manual-card-head">
+                    <h4 class="manual-card-title">${escapeHtml(item.name)}</h4>
+                    <span class="manual-card-tag">${escapeHtml(item.tag)}</span>
+                  </div>
+                  <div class="manual-field-grid">
+                    ${renderDataField("说明", item.desc, true)}
+                  </div>
                 </section>
               `
             )
             .join("");
 
           const pageHtml = `
-            <div class="ny10-page">
-              <div class="ny10-lead">
+            <div class="manual-page">
+              <p class="manual-lead tone-heat">
                 耐热改性体系在ABS/ASA/AES中，关键目标是以更低添加量实现耐热提升，同时维持冲击与加工窗口。
                 本页聚焦性能数据、应用映射与选型决策，用于技术方案对比和导入评估。
-              </div>
+              </p>
 
-              <section class="ny10-card">
-                <div class="ny10-card-head">
-                  <h3 class="ny10-card-title">耐热改性性能对比（NPMI路线 vs AMSAN）</h3>
-                  <p class="ny10-card-subtitle">Performance benchmark</p>
+              <section class="manual-block tone-heat">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">耐热改性性能对比（NPMI路线 vs AMSAN）</h3>
+                  <p class="manual-block-subtitle">Performance benchmark</p>
                 </div>
-                <div class="ny10-card-body">
+                <div class="manual-block-body">
                   <div class="heat-kpi-grid">
                     ${kpiCards}
                   </div>
-                  <table class="ny10-table heat-stack-table">
-                    <thead>
-                      <tr>
-                        <th>比较项</th>
-                        <th>Denka IP</th>
-                        <th>AMSAN</th>
-                        <th>结论</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${benchmarkRows}
-                    </tbody>
-                  </table>
+                  <div class="manual-card-grid" style="margin-top:0.5rem;">
+                    ${benchmarkCards}
+                  </div>
                 </div>
               </section>
 
-              <section class="ny10-card">
-                <div class="ny10-card-head">
-                  <h3 class="ny10-card-title">应用场景图文速览</h3>
-                  <p class="ny10-card-subtitle">Application cards + mapping</p>
+              <section class="manual-block tone-heat">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">应用场景图文速览</h3>
+                  <p class="manual-block-subtitle">Application cards + mapping</p>
                 </div>
-                <div class="ny10-card-body">
+                <div class="manual-block-body">
                   <div class="heat-visual-grid">
                     ${visualCards}
                   </div>
-                  <table class="ny10-table">
-                    <thead>
-                      <tr>
-                        <th>应用方向</th>
-                        <th>典型产品</th>
-                        <th>推荐牌号</th>
-                        <th>建议添加量</th>
-                        <th>技术要点</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${applicationRows}
-                    </tbody>
-                  </table>
-                  <p class="ny10-note">注：图卡内容来自耐热剂知识库的应用与测试数据，便于销售和技术沟通时快速引用。</p>
+                  <div class="manual-card-grid" style="margin-top:0.5rem;">
+                    ${applicationCards}
+                  </div>
+                  <p class="manual-note">注：图卡内容来自耐热剂知识库的应用与测试数据，便于销售和技术沟通时快速引用。</p>
                 </div>
               </section>
 
-              <section class="ny10-card">
-                <div class="ny10-card-head">
-                  <h3 class="ny10-card-title">牌号差异与选型决策</h3>
-                  <p class="ny10-card-subtitle">Grade differences + decision matrix</p>
+              <section class="manual-block tone-heat">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">牌号差异与选型决策</h3>
+                  <p class="manual-block-subtitle">Grade differences + decision matrix</p>
                 </div>
-                <div class="ny10-card-body">
-                  <table class="ny10-table">
-                    <thead>
-                      <tr>
-                        <th>牌号</th>
-                        <th>形态</th>
-                        <th>Tg</th>
-                        <th>MFR</th>
-                        <th>定位</th>
-                        <th>推荐场景</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${gradeDiffRows}
-                    </tbody>
-                  </table>
-
-                  <table class="ny10-table heat-stack-table">
-                    <thead>
-                      <tr>
-                        <th>需求特征</th>
-                        <th>优先牌号</th>
-                        <th>备选牌号</th>
-                        <th>判断依据</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${decisionRows}
-                    </tbody>
-                  </table>
-
-                  <table class="ny10-table heat-stack-table">
-                    <thead>
-                      <tr>
-                        <th>知识库关键参数</th>
-                        <th>数据</th>
-                        <th>来源/方法</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${propertyRows}
-                    </tbody>
-                  </table>
-
-                  <div class="heat-chip-grid heat-stack-table">
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${gradeDiffCards}
+                  </div>
+                  <div class="manual-card-grid" style="margin-top:0.5rem;">
+                    ${decisionCards}
+                  </div>
+                  <div class="manual-card-grid" style="margin-top:0.5rem;">
+                    ${propertyCards}
+                  </div>
+                  <div class="manual-card-grid" style="margin-top:0.5rem;">
                     ${gradeCards}
                   </div>
-                  <p class="ny10-note">注：添加量与最终Vicat、冲击、流动性相关，建议以目标物性为约束做小试DOE确认。</p>
+                  <p class="manual-note">注：添加量与最终Vicat、冲击、流动性相关，建议以目标物性为约束做小试DOE确认。</p>
                 </div>
               </section>
             </div>
           `;
 
-          renderOverlayPage(body, "heat13-overlay", "heat-page-13-v3", pageHtml);
+          renderOverlayPage(body, "heat13-overlay", "heat-page-13-v4", pageHtml);
         };
 
         const patchHeatPage14 = (page) => {
@@ -2492,31 +2750,21 @@
           if (headerTitle) headerTitle.textContent = "耐热剂加工建议与问题处理";
           if (headerSubtitle) headerSubtitle.textContent = "Processing Window + Troubleshooting";
 
-          const processRows = heat14ProcessWindowRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                  <td>${escapeHtml(row[3])}</td>
-                  <td>${escapeHtml(row[4])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const processCards = renderRowCards({
+            rows: heat14ProcessWindowRows,
+            headers: ["牌号组", "C2", "C3", "C4+目标", "工艺重点"],
+            titleIndex: 0,
+            toneClass: "tone-heat",
+            highlightIndices: [3]
+          });
 
-          const sopRows = heat14SopRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const sopCards = renderRowCards({
+            rows: heat14SopRows,
+            headers: ["阶段", "关键动作", "目标结果"],
+            titleIndex: 0,
+            toneClass: "tone-heat",
+            highlightIndices: [2]
+          });
 
           const visualCards = heat14VisualCards
             .map(
@@ -2541,108 +2789,79 @@
           const checklistCards = heat14ProcessChecklist
             .map(
               (item) => `
-                <section class="heat-chip">
-                  <h4>${escapeHtml(item.title)}</h4>
-                  <p>${escapeHtml(item.detail)}</p>
+                <section class="manual-data-card tone-heat">
+                  <div class="manual-card-head">
+                    <h4 class="manual-card-title">${escapeHtml(item.title)}</h4>
+                  </div>
+                  <div class="manual-field-grid">
+                    ${renderDataField("要点", item.detail, true)}
+                  </div>
                 </section>
               `
             )
             .join("");
 
-          const issueRows = heat14IssueRows
-            .map(
-              (row) => `
-                <tr>
-                  <td>${escapeHtml(row[0])}</td>
-                  <td>${escapeHtml(row[1])}</td>
-                  <td>${escapeHtml(row[2])}</td>
-                </tr>
-              `
-            )
-            .join("");
+          const issueCards = renderRowCards({
+            rows: heat14IssueRows,
+            headers: ["异常现象", "常见原因", "优先调整建议"],
+            titleIndex: 0,
+            toneClass: "tone-heat",
+            highlightIndices: [2]
+          });
 
           const pageHtml = `
-            <div class="ny10-page">
-              <div class="ny10-lead">
+            <div class="manual-page">
+              <p class="manual-lead tone-heat">
                 耐热剂体系放大时，稳定分散与热史控制比“单纯拉高温度”更关键。
                 本页给出造粒窗口、打样SOP和常见问题处理建议，用于试产与量产对齐。
-              </div>
+              </p>
 
-              <section class="ny10-card">
-                <div class="ny10-card-head">
-                  <h3 class="ny10-card-title">造粒温度窗口（双螺杆）</h3>
-                  <p class="ny10-card-subtitle">Extrusion temperature guideline</p>
+              <section class="manual-block tone-heat">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">造粒温度窗口（双螺杆）</h3>
+                  <p class="manual-block-subtitle">Extrusion temperature guideline</p>
                 </div>
-                <div class="ny10-card-body">
-                  <table class="ny10-table">
-                    <thead>
-                      <tr>
-                        <th>牌号组</th>
-                        <th>C2</th>
-                        <th>C3</th>
-                        <th>C4+目标</th>
-                        <th>工艺重点</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${processRows}
-                    </tbody>
-                  </table>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${processCards}
+                  </div>
                 </div>
               </section>
 
-              <section class="ny10-card">
-                <div class="ny10-card-head">
-                  <h3 class="ny10-card-title">打样SOP与过程检查</h3>
-                  <p class="ny10-card-subtitle">Sampling SOP + process checklist</p>
+              <section class="manual-block tone-heat">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">打样SOP与过程检查</h3>
+                  <p class="manual-block-subtitle">Sampling SOP + process checklist</p>
                 </div>
-                <div class="ny10-card-body">
+                <div class="manual-block-body">
                   <div class="heat-visual-grid is-three">
                     ${visualCards}
                   </div>
-                  <table class="ny10-table">
-                    <thead>
-                      <tr>
-                        <th>阶段</th>
-                        <th>关键动作</th>
-                        <th>目标结果</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${sopRows}
-                    </tbody>
-                  </table>
-                  <div class="heat-chip-grid heat-stack-table">
+                  <div class="manual-card-grid" style="margin-top:0.5rem;">
+                    ${sopCards}
+                  </div>
+                  <div class="manual-card-grid" style="margin-top:0.5rem;">
                     ${checklistCards}
                   </div>
                 </div>
               </section>
 
-              <section class="ny10-card">
-                <div class="ny10-card-head">
-                  <h3 class="ny10-card-title">常见问题与调整方向</h3>
-                  <p class="ny10-card-subtitle">Troubleshooting</p>
+              <section class="manual-block tone-heat">
+                <div class="manual-block-head">
+                  <h3 class="manual-block-title">常见问题与调整方向</h3>
+                  <p class="manual-block-subtitle">Troubleshooting</p>
                 </div>
-                <div class="ny10-card-body">
-                  <table class="ny10-table">
-                    <thead>
-                      <tr>
-                        <th>异常现象</th>
-                        <th>常见原因</th>
-                        <th>优先调整建议</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${issueRows}
-                    </tbody>
-                  </table>
-                  <p class="ny10-note">注：建议按“外观 -> 流动 -> 冲击 -> VOC”顺序做迭代评估，避免一次性多变量改动导致判断失真。</p>
+                <div class="manual-block-body">
+                  <div class="manual-card-grid">
+                    ${issueCards}
+                  </div>
+                  <p class="manual-note">注：建议按“外观 -> 流动 -> 冲击 -> VOC”顺序做迭代评估，避免一次性多变量改动导致判断失真。</p>
                 </div>
               </section>
             </div>
           `;
 
-          renderOverlayPage(body, "heat14-overlay", "heat-page-14-v3", pageHtml);
+          renderOverlayPage(body, "heat14-overlay", "heat-page-14-v4", pageHtml);
         };
 
         const patchCurrentPage = () => {
