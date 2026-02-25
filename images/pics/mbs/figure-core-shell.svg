@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">MBS核壳结构示意图</title>
+  <desc id="desc">展示MBS粒子由橡胶核与接枝壳层组成，并分散于PC或PCABS基体中</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="100%" stop-color="#eef2f6"/>
+    </linearGradient>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffb3b3"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe6a8"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <style>
+      .label { font: 600 26px "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; fill: #243746; }
+      .small { font: 500 21px "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; fill: #3d5363; }
+      .tiny  { font: 500 18px "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; fill: #627888; }
+      .box { fill: #ffffff; stroke: #d8e0e8; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="520" fill="url(#bg)"/>
+
+  <text x="48" y="58" class="label">MBS核壳结构示意</text>
+  <text x="48" y="88" class="tiny">外壳提高与基体相容性，橡胶核负责吸收冲击能量</text>
+
+  <rect x="44" y="120" width="1112" height="348" rx="24" class="box"/>
+
+  <g transform="translate(0,8)">
+    <circle cx="250" cy="288" r="122" fill="url(#shell)" opacity="0.92"/>
+    <circle cx="250" cy="288" r="72" fill="url(#core)"/>
+
+    <circle cx="560" cy="288" r="118" fill="url(#shell)" opacity="0.92"/>
+    <circle cx="560" cy="288" r="68" fill="url(#core)"/>
+
+    <circle cx="860" cy="288" r="126" fill="url(#shell)" opacity="0.92"/>
+    <circle cx="860" cy="288" r="74" fill="url(#core)"/>
+  </g>
+
+  <g stroke="#5b7080" stroke-width="2" fill="none">
+    <line x1="250" y1="166" x2="154" y2="132"/>
+    <line x1="250" y1="216" x2="136" y2="202"/>
+    <line x1="560" y1="170" x2="678" y2="136"/>
+    <line x1="860" y1="162" x2="958" y2="124"/>
+  </g>
+
+  <text x="60" y="130" class="small">壳层（MMA/St接枝层）</text>
+  <text x="60" y="202" class="small">提高与PC/PCABS基体的界面结合</text>
+
+  <text x="690" y="136" class="small">核层（丁二烯/橡胶相）</text>
+  <text x="690" y="202" class="small">在冲击下发生形变并耗散能量</text>
+
+  <text x="967" y="126" class="small">核壳粒子分散于树脂基体</text>
+
+  <rect x="74" y="406" width="1030" height="42" rx="10" fill="#f9e2e2"/>
+  <text x="94" y="433" class="small">结构逻辑：硬壳保障相容和分散，软核承担韧化，二者协同实现“强度-韧性”平衡</text>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">MBS增韧机理示意图</title>
+  <desc id="desc">展示裂纹遇到MBS核壳粒子后偏转、钝化并通过基体剪切屈服耗散能量</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f9fafb"/>
+      <stop offset="100%" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff8b8b"/>
+      <stop offset="100%" stop-color="#c31717"/>
+    </linearGradient>
+    <linearGradient id="particle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffc0c0"/>
+      <stop offset="100%" stop-color="#db2d2d"/>
+    </linearGradient>
+    <style>
+      .h1 { font: 600 27px "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; fill: #223949; }
+      .h2 { font: 600 22px "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; fill: #2f4a5b; }
+      .p  { font: 500 18px "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; fill: #4b6273; }
+      .box { fill: #ffffff; stroke: #d8e0e9; stroke-width: 2; rx: 18; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 z" fill="#b71f1f"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="560" fill="url(#bg2)"/>
+  <text x="46" y="58" class="h1">MBS增韧机理示意</text>
+  <text x="46" y="88" class="p">裂纹扩展路径被核壳粒子重构，能量由多机制共同耗散</text>
+
+  <g transform="translate(38,118)">
+    <rect class="box" x="0" y="0" width="262" height="340"/>
+    <rect class="box" x="286" y="0" width="262" height="340"/>
+    <rect class="box" x="572" y="0" width="262" height="340"/>
+    <rect class="box" x="858" y="0" width="262" height="340"/>
+
+    <text x="16" y="34" class="h2">1. 裂纹起始</text>
+    <text x="304" y="34" class="h2">2. 裂纹偏转</text>
+    <text x="590" y="34" class="h2">3. 界面耗能</text>
+    <text x="876" y="34" class="h2">4. 韧性提升</text>
+
+    <rect x="24" y="64" width="214" height="210" fill="#f2f5f9" stroke="#d5dde6"/>
+    <line x1="28" y1="248" x2="190" y2="112" stroke="#2f3f4f" stroke-width="5"/>
+    <circle cx="116" cy="180" r="24" fill="url(#particle)"/>
+    <text x="24" y="304" class="p">外载作用下微裂纹产生</text>
+
+    <rect x="310" y="64" width="214" height="210" fill="#f2f5f9" stroke="#d5dde6"/>
+    <line x1="316" y1="250" x2="392" y2="190" stroke="#2f3f4f" stroke-width="5"/>
+    <line x1="392" y1="190" x2="478" y2="228" stroke="#2f3f4f" stroke-width="5"/>
+    <circle cx="404" cy="180" r="28" fill="url(#particle)"/>
+    <text x="312" y="304" class="p">裂纹在粒子周围发生偏转</text>
+
+    <rect x="596" y="64" width="214" height="210" fill="#f2f5f9" stroke="#d5dde6"/>
+    <circle cx="702" cy="168" r="34" fill="url(#particle)"/>
+    <circle cx="702" cy="168" r="16" fill="#ffde9f"/>
+    <path d="M636 212 C664 196, 740 196, 770 212" fill="none" stroke="#b71f1f" stroke-width="4" stroke-dasharray="7 6"/>
+    <text x="598" y="304" class="p">空穴化+基体剪切屈服耗散能量</text>
+
+    <rect x="882" y="64" width="214" height="210" fill="#f2f5f9" stroke="#d5dde6"/>
+    <g fill="url(#accent)">
+      <rect x="904" y="232" width="26" height="30" rx="3"/>
+      <rect x="944" y="206" width="26" height="56" rx="3"/>
+      <rect x="984" y="172" width="26" height="90" rx="3"/>
+      <rect x="1024" y="142" width="26" height="120" rx="3"/>
+      <rect x="1064" y="116" width="26" height="146" rx="3"/>
+    </g>
+    <text x="900" y="304" class="p">冲击保持率与可靠性提升</text>
+
+    <line x1="248" y1="170" x2="286" y2="170" stroke="#b71f1f" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="534" y1="170" x2="572" y2="170" stroke="#b71f1f" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="820" y1="170" x2="858" y2="170" stroke="#b71f1f" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+
+  <rect x="46" y="486" width="1108" height="46" rx="10" fill="#fde7e7"/>
+  <text x="66" y="516" class="h2">关键点：MBS并非“单点增韧”，而是通过裂纹偏转、界面耗能、基体屈服等多机制叠加实现体系韧化</text>
+</svg>

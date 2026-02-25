@@ -1,0 +1,2774 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>中聚化工产品目录</title>
+    <script type="module" crossorigin src="./assets/index-BmWsdeoM.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CDIGtBpg.css">
+    <style>
+      .company-intro-paragraph {
+        margin: 0 0 0.9rem 0;
+      }
+
+      .company-kpi-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin-top: 1.1rem;
+      }
+
+      .company-kpi-chip {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3rem;
+        padding: 0.6rem 0.7rem;
+        border-radius: 0.85rem;
+        border: 1px solid #f2d4d4;
+        background: linear-gradient(135deg, #fff5f5 0%, #ffeaea 100%);
+        color: #9f1515;
+        font-weight: 700;
+        font-size: 0.82rem;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      .supplier-page-intro {
+        font-size: 0.8rem;
+        line-height: 1.55;
+        color: #4b5563;
+        margin-bottom: 0.9rem;
+      }
+
+      .supplier-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.65rem;
+      }
+
+      .supplier-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 5.9rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.8rem;
+        background: #fff;
+        padding: 0.55rem 0.5rem 0.45rem;
+      }
+
+      .supplier-logo-wrap {
+        width: 100%;
+        height: 2.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.45rem;
+      }
+
+      .supplier-logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .supplier-fallback-mark {
+        width: 2.1rem;
+        height: 2.1rem;
+        border-radius: 0.55rem;
+        background: linear-gradient(145deg, #f3f4f6 0%, #e5e7eb 100%);
+        color: #6b7280;
+        font-size: 0.55rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .supplier-name {
+        margin-top: auto;
+        font-size: 0.66rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #374151;
+        text-align: center;
+        word-break: break-word;
+      }
+
+      .catalog-custom-page {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .catalog-section {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.85rem;
+        background: #ffffff;
+        overflow: hidden;
+      }
+
+      .catalog-section-head {
+        padding: 0.52rem 0.68rem;
+        background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .catalog-section-title {
+        margin: 0;
+        font-size: 0.82rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .catalog-section-subtitle {
+        margin: 0.15rem 0 0;
+        font-size: 0.62rem;
+        line-height: 1.25;
+        color: #6b7280;
+      }
+
+      .catalog-section-body {
+        padding: 0.48rem 0.68rem 0.58rem;
+      }
+
+      .catalog-group {
+        display: grid;
+        grid-template-columns: 5.4rem 1fr;
+        gap: 0.48rem;
+        align-items: flex-start;
+        padding: 0.3rem 0;
+        border-bottom: 1px dashed #eceff3;
+      }
+
+      .catalog-group:last-child {
+        border-bottom: 0;
+      }
+
+      .catalog-group-title {
+        font-size: 0.64rem;
+        line-height: 1.25;
+        font-weight: 700;
+        color: #374151;
+        padding-top: 0.12rem;
+      }
+
+      .catalog-group-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.28rem;
+      }
+
+      .catalog-chip {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.22rem;
+        padding: 0.14rem 0.34rem;
+        border-radius: 0.45rem;
+        border: 1px solid #e5e7eb;
+        background: #f9fafb;
+        color: #1f2937;
+        font-size: 0.59rem;
+        line-height: 1.15;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .catalog-chip.is-empty {
+        border-style: dashed;
+        color: #9ca3af;
+        background: #fcfcfc;
+      }
+
+      .mbs-intro-page {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.72rem;
+      }
+
+      .mbs-intro-lead {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.85rem;
+        background: linear-gradient(135deg, #fff8f8 0%, #fff2f2 100%);
+        padding: 0.65rem 0.72rem;
+        font-size: 0.73rem;
+        line-height: 1.5;
+        color: #374151;
+      }
+
+      .mbs-intro-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.65rem;
+      }
+
+      .mbs-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.8rem;
+        background: #fff;
+        padding: 0.58rem 0.65rem;
+      }
+
+      .mbs-card-title {
+        margin: 0 0 0.3rem 0;
+        font-size: 0.72rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .mbs-card p {
+        margin: 0;
+        font-size: 0.64rem;
+        line-height: 1.45;
+        color: #4b5563;
+      }
+
+      .mbs-composition-list {
+        margin: 0;
+        padding-left: 0.95rem;
+      }
+
+      .mbs-composition-list li {
+        margin: 0.18rem 0;
+        font-size: 0.63rem;
+        line-height: 1.4;
+        color: #4b5563;
+      }
+
+      .mbs-flow {
+        display: flex;
+        align-items: stretch;
+        gap: 0.35rem;
+        flex-wrap: wrap;
+      }
+
+      .mbs-flow-step {
+        flex: 1 1 7rem;
+        min-height: 2.2rem;
+        border: 1px solid #eceff3;
+        border-radius: 0.62rem;
+        padding: 0.38rem 0.45rem;
+        background: #f8fafc;
+        font-size: 0.58rem;
+        line-height: 1.25;
+        font-weight: 600;
+        color: #334155;
+        display: flex;
+        align-items: center;
+      }
+
+      .mbs-figure-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.65rem;
+      }
+
+      .mbs-figure-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.78rem;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .mbs-figure-head {
+        padding: 0.34rem 0.48rem;
+        border-bottom: 1px solid #e5e7eb;
+        background: #fafbfd;
+      }
+
+      .mbs-figure-title {
+        margin: 0;
+        font-size: 0.66rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .mbs-figure-subtitle {
+        margin: 0.12rem 0 0;
+        font-size: 0.52rem;
+        line-height: 1.2;
+        color: #6b7280;
+      }
+
+      .mbs-figure-body {
+        padding: 0.36rem;
+      }
+
+      .mbs-figure-body img {
+        width: 100%;
+        height: 7.4rem;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+      }
+
+      .mbs-compare-page {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.85rem;
+        background: #fff;
+        padding: 0.58rem 0.65rem;
+      }
+
+      .mbs-compare-lead {
+        margin: 0 0 0.46rem 0;
+        font-size: 0.63rem;
+        line-height: 1.4;
+        color: #6b7280;
+      }
+
+      .mbs-compare-wrap {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.65rem;
+        overflow: hidden;
+      }
+
+      .mbs-compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      .mbs-compare-table th,
+      .mbs-compare-table td {
+        border: 1px solid #edf0f3;
+        padding: 0.28rem 0.32rem;
+        font-size: 0.56rem;
+        line-height: 1.28;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .mbs-compare-table th {
+        background: #f7fafc;
+        color: #374151;
+        font-weight: 700;
+      }
+
+      .mbs-compare-table td:first-child,
+      .mbs-compare-table th:first-child {
+        text-align: left;
+        width: 6.3rem;
+      }
+
+      .mbs-compare-note {
+        margin: 0.45rem 0 0;
+        font-size: 0.54rem;
+        line-height: 1.35;
+        color: #9ca3af;
+      }
+
+      .mbs7-page {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.56rem;
+      }
+
+      .mbs7-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.75rem;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .mbs7-card-head {
+        display: flex;
+        align-items: baseline;
+        gap: 0.35rem;
+        padding: 0.32rem 0.5rem;
+        background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .mbs7-card-title {
+        margin: 0;
+        font-size: 0.66rem;
+        font-weight: 700;
+        color: #9f1515;
+        line-height: 1.2;
+      }
+
+      .mbs7-card-subtitle {
+        margin: 0;
+        font-size: 0.52rem;
+        color: #6b7280;
+        line-height: 1.2;
+      }
+
+      .mbs7-body {
+        padding: 0.38rem 0.45rem;
+      }
+
+      .mbs7-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      .mbs7-table th,
+      .mbs7-table td {
+        border: 1px solid #edf0f3;
+        padding: 0.22rem 0.26rem;
+        font-size: 0.53rem;
+        line-height: 1.22;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .mbs7-table th {
+        background: #f8fafc;
+        color: #374151;
+        font-weight: 700;
+      }
+
+      .mbs7-table td:first-child,
+      .mbs7-table th:first-child {
+        text-align: left;
+      }
+
+      .mbs7-gradient-row td:first-child {
+        font-weight: 700;
+      }
+
+      .mbs7-grade-cell {
+        display: flex;
+        align-items: center;
+        gap: 0.26rem;
+      }
+
+      .mbs7-grade-score {
+        min-width: 1.32rem;
+        text-align: right;
+        font-size: 0.5rem;
+        color: #6b7280;
+      }
+
+      .mbs7-gradient-track {
+        position: relative;
+        flex: 1;
+        height: 0.44rem;
+        border-radius: 999px;
+        background: #f1f5f9;
+        overflow: hidden;
+      }
+
+      .mbs7-gradient-bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #fecaca 0%, #ef4444 58%, #b91c1c 100%);
+      }
+
+      .mbs7-reco-table td:nth-child(1) {
+        width: 5.2rem;
+        font-weight: 700;
+      }
+
+      .mbs7-reco-table td:nth-child(2) {
+        width: 2.9rem;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .acr8-page,
+      .acr9-page {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.56rem;
+      }
+
+      .acr8-lead,
+      .acr9-lead {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.8rem;
+        background: linear-gradient(135deg, #fff8f8 0%, #fff2f2 100%);
+        padding: 0.55rem 0.66rem;
+        font-size: 0.62rem;
+        line-height: 1.42;
+        color: #4b5563;
+      }
+
+      .acr8-grade-grid,
+      .acr9-grade-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.52rem;
+      }
+
+      .acr8-grade-card,
+      .acr9-grade-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.74rem;
+        background: #fff;
+        padding: 0.45rem 0.55rem;
+      }
+
+      .acr8-grade-head,
+      .acr9-grade-head {
+        display: flex;
+        align-items: center;
+        gap: 0.32rem;
+        margin-bottom: 0.24rem;
+      }
+
+      .acr8-grade-name,
+      .acr9-grade-name {
+        margin: 0;
+        font-size: 0.68rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .acr8-grade-tag,
+      .acr9-grade-tag {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1rem;
+        padding: 0.05rem 0.28rem;
+        border-radius: 999px;
+        border: 1px solid #f0d5d5;
+        background: #fff5f5;
+        color: #9f1515;
+        font-size: 0.5rem;
+        line-height: 1;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .acr8-grade-card p,
+      .acr9-grade-card p {
+        margin: 0;
+        font-size: 0.56rem;
+        line-height: 1.34;
+        color: #4b5563;
+      }
+
+      .acr8-section,
+      .acr9-section {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.75rem;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .acr8-section-head,
+      .acr9-section-head {
+        display: flex;
+        align-items: baseline;
+        gap: 0.3rem;
+        padding: 0.3rem 0.48rem;
+        border-bottom: 1px solid #e5e7eb;
+        background: linear-gradient(135deg, #f8fafc 0%, #f2f6fb 100%);
+      }
+
+      .acr8-section-title,
+      .acr9-section-title {
+        margin: 0;
+        font-size: 0.64rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .acr8-section-subtitle,
+      .acr9-section-subtitle {
+        margin: 0;
+        font-size: 0.5rem;
+        line-height: 1.2;
+        color: #6b7280;
+      }
+
+      .acr8-section-body,
+      .acr9-section-body {
+        padding: 0.34rem 0.42rem;
+      }
+
+      .acr8-table,
+      .acr9-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      .acr8-table th,
+      .acr8-table td,
+      .acr9-table th,
+      .acr9-table td {
+        border: 1px solid #edf0f3;
+        padding: 0.2rem 0.24rem;
+        font-size: 0.52rem;
+        line-height: 1.22;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .acr8-table th,
+      .acr9-table th {
+        background: #f8fafc;
+        color: #374151;
+        font-weight: 700;
+      }
+
+      .acr8-table td:first-child,
+      .acr8-table th:first-child,
+      .acr9-table td:first-child,
+      .acr9-table th:first-child {
+        text-align: left;
+      }
+
+      .acr9-route-table td:nth-child(1) {
+        width: 2.35rem;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .acr9-scenario-table td:nth-child(1) {
+        width: 4.1rem;
+        font-weight: 700;
+      }
+
+      .acr9-scenario-table td:nth-child(2) {
+        width: 2.8rem;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .acr-note {
+        margin: 0.3rem 0 0;
+        font-size: 0.5rem;
+        line-height: 1.3;
+        color: #9ca3af;
+      }
+
+      .custom-page-overlay {
+        width: 100%;
+      }
+
+      .ny10-page {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.56rem;
+      }
+
+      .ny10-lead {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.8rem;
+        background: linear-gradient(135deg, #fff8f8 0%, #fff2f2 100%);
+        padding: 0.52rem 0.62rem;
+        font-size: 0.61rem;
+        line-height: 1.42;
+        color: #4b5563;
+      }
+
+      .ny10-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.75rem;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .ny10-card-head {
+        display: flex;
+        align-items: baseline;
+        gap: 0.32rem;
+        padding: 0.3rem 0.46rem;
+        border-bottom: 1px solid #e5e7eb;
+        background: linear-gradient(135deg, #f8fafc 0%, #f2f6fb 100%);
+      }
+
+      .ny10-card-title {
+        margin: 0;
+        font-size: 0.64rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .ny10-card-subtitle {
+        margin: 0;
+        font-size: 0.5rem;
+        line-height: 1.2;
+        color: #6b7280;
+      }
+
+      .ny10-card-body {
+        padding: 0.34rem 0.42rem;
+      }
+
+      .ny10-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      .ny10-table th,
+      .ny10-table td {
+        border: 1px solid #edf0f3;
+        padding: 0.2rem 0.24rem;
+        font-size: 0.52rem;
+        line-height: 1.22;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .ny10-table th {
+        background: #f8fafc;
+        color: #374151;
+        font-weight: 700;
+      }
+
+      .ny10-table td:first-child,
+      .ny10-table th:first-child {
+        text-align: left;
+      }
+
+      .ny10-chip-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.45rem;
+      }
+
+      .ny10-chip-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.64rem;
+        background: #fff;
+        padding: 0.32rem 0.4rem;
+      }
+
+      .ny10-chip-head {
+        display: flex;
+        align-items: center;
+        gap: 0.24rem;
+        margin-bottom: 0.16rem;
+      }
+
+      .ny10-chip-name {
+        margin: 0;
+        font-size: 0.6rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .ny10-chip-tag {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 0.95rem;
+        padding: 0.04rem 0.24rem;
+        border-radius: 999px;
+        border: 1px solid #f0d5d5;
+        background: #fff5f5;
+        color: #9f1515;
+        font-size: 0.48rem;
+        line-height: 1;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .ny10-chip-card p {
+        margin: 0;
+        font-size: 0.53rem;
+        line-height: 1.3;
+        color: #4b5563;
+      }
+
+      .ny10-note {
+        margin: 0.28rem 0 0;
+        font-size: 0.5rem;
+        line-height: 1.28;
+        color: #9ca3af;
+      }
+
+      .merged-page-empty {
+        min-height: 14rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #9ca3af;
+        font-size: 0.64rem;
+        line-height: 1.3;
+        border: 1px dashed #e5e7eb;
+        border-radius: 0.8rem;
+        background: #fff;
+      }
+
+      .heat-chip-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.4rem;
+      }
+
+      .heat-chip {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.62rem;
+        background: #fff;
+        padding: 0.3rem 0.36rem;
+      }
+
+      .heat-chip h4 {
+        margin: 0 0 0.12rem 0;
+        font-size: 0.58rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .heat-chip p {
+        margin: 0;
+        font-size: 0.52rem;
+        line-height: 1.26;
+        color: #4b5563;
+      }
+
+      .heat-kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.36rem;
+      }
+
+      .heat-kpi-card {
+        border: 1px solid #e8e0e0;
+        border-radius: 0.62rem;
+        background: linear-gradient(135deg, #fff8f8 0%, #fff 100%);
+        padding: 0.28rem 0.34rem;
+      }
+
+      .heat-kpi-title {
+        margin: 0;
+        font-size: 0.48rem;
+        line-height: 1.2;
+        color: #6b7280;
+      }
+
+      .heat-kpi-value {
+        margin: 0.08rem 0 0;
+        font-size: 0.55rem;
+        line-height: 1.25;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .heat-kpi-detail {
+        margin: 0.08rem 0 0;
+        font-size: 0.48rem;
+        line-height: 1.22;
+        color: #4b5563;
+      }
+
+      .heat-visual-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.4rem;
+      }
+
+      .heat-visual-grid.is-three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .heat-visual-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.66rem;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .heat-visual-media {
+        height: 2.8rem;
+        background: #f3f4f6;
+      }
+
+      .heat-visual-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+      .heat-visual-body {
+        padding: 0.3rem 0.35rem;
+      }
+
+      .heat-visual-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.24rem;
+        margin-bottom: 0.14rem;
+      }
+
+      .heat-visual-title {
+        margin: 0;
+        font-size: 0.57rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .heat-visual-tag {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 0.9rem;
+        padding: 0.04rem 0.2rem;
+        border-radius: 999px;
+        border: 1px solid #f0d5d5;
+        background: #fff5f5;
+        color: #9f1515;
+        font-size: 0.46rem;
+        line-height: 1;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .heat-visual-desc {
+        margin: 0;
+        font-size: 0.51rem;
+        line-height: 1.25;
+        color: #4b5563;
+      }
+
+      .heat-visual-meta {
+        margin: 0.08rem 0 0;
+        font-size: 0.49rem;
+        line-height: 1.24;
+        color: #6b7280;
+      }
+
+      .heat-visual-meta strong {
+        color: #9f1515;
+      }
+
+      .heat-stack-table {
+        margin-top: 0.32rem;
+      }
+
+      .heat-stack-table td:nth-child(2) {
+        font-weight: 700;
+        color: #9f1515;
+      }
+
+      .heat-stack-table td:nth-child(3) {
+        width: 2.65rem;
+      }
+
+      .heat-stack-table td:nth-child(4) {
+        width: 3.5rem;
+      }
+
+      @media (max-width: 1024px) {
+        .supplier-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .heat-kpi-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .heat-visual-grid.is-three {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 900px) {
+        .company-kpi-row {
+          gap: 0.5rem;
+        }
+
+        .company-kpi-chip {
+          min-height: 2.7rem;
+          font-size: 0.74rem;
+          padding: 0.45rem;
+        }
+
+        .supplier-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 0.5rem;
+        }
+
+        .supplier-card {
+          min-height: 5.2rem;
+        }
+
+        .catalog-group {
+          grid-template-columns: 4.8rem 1fr;
+        }
+
+        .mbs-intro-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .mbs-figure-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .mbs-figure-body img {
+          height: 6.2rem;
+        }
+
+        .acr8-grade-grid,
+        .acr9-grade-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ny10-chip-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .heat-chip-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .heat-kpi-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .heat-visual-grid,
+        .heat-visual-grid.is-three {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        .company-kpi-chip {
+          border-color: #e7d2d2;
+          background: #f9efef;
+          box-shadow: none;
+        }
+
+        .catalog-section {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      (() => {
+        const companyIntroParagraphs = [
+          "成立于 2009 年的中聚化工，专注于工程塑料改性的助剂与原料供应，以模块化产品组合服务广大改性客户。",
+          "我们聚焦最擅长的材料领域，配备资深工程师团队，为客户提供从配方评估到量产落地的全流程技术支持。",
+          "依托全国仓储网络与全球合作伙伴，我们把先进材料、快速交付和专业售后同步带到每一个项目现场。"
+        ];
+
+        const companyMetrics = [
+          "12+ 核心供应商",
+          "1200+ 服务客户",
+          "10+ 全国仓储网络"
+        ];
+
+        const supplierList = [
+          "LG化学",
+          "KANEKA",
+          "ASP",
+          "KENKA",
+          "KUMHUO",
+          "SABIC",
+          "盛喜奥",
+          "三洋化成",
+          "高莱",
+          "英威达",
+          "巴斯夫",
+          "禾大"
+        ];
+
+        const supplierLogoMap = {
+          "LG化学": "/images/pics/logo/lg-chem-logo-png_seeklogo-325101.png",
+          KANEKA: "/images/pics/logo/kaneka-logo-png-transparent.png",
+          KENKA: "/images/pics/logo/denka-logo-png_seeklogo-409285.png",
+          高莱: "/images/pics/logo/Colloids_China_Logo.png",
+          英威达: "/images/pics/logo/invista-logo-png_seeklogo-314376.png"
+        };
+
+        const page4Sections = [
+          {
+            title: "PC & PC Alloys",
+            groups: [
+              { label: "抗冲改性剂", items: ["EM-500", "M-732", "M-701", "M-722", "M-724", "M-726", "M-711"] },
+              { label: "光扩散剂", items: ["KL-200M", "MP-90"] },
+              { label: "阻燃剂", items: ["MR-01", "MR-04", "RDP"] },
+              { label: "消光剂", items: ["B-MAT", "M-765"] }
+            ]
+          },
+          {
+            title: "ABS & ASA",
+            groups: [
+              { label: "ABS胶粉", items: ["HR-181"] },
+              { label: "ASA胶粉", items: ["YH-108", "YH-208", "YH-218", "YH-258"] },
+              { label: "耐热剂", items: ["MS-NB", "MS-NI", "MS-NIP"] },
+              { label: "阻燃剂", items: ["SR-245"] },
+              { label: "抗静电剂", items: [] }
+            ]
+          }
+        ];
+
+        const page5Sections = [
+          {
+            title: "PA & PBT",
+            groups: [
+              { label: "增韧剂", items: ["AX8900", "SPG20", "M-582"] },
+              { label: "PA/ABS相容剂", items: ["MS-NB"] },
+              { label: "黑色母", items: ["高莱"] }
+            ]
+          },
+          {
+            title: "PMMA & PLA & PETG",
+            groups: [
+              { label: "PMMA透明增韧", items: ["M210", "M230", "M240", "MCI800"] },
+              { label: "PLA透明增韧", items: ["FM50"] },
+              { label: "PETG透明增韧", items: ["M300"] },
+              { label: "PLA PETG 增韧剂", items: ["EM500", "M724", "M577", "M582"] },
+              { label: "PLA PETG消光剂", items: ["BMAT", "M-765"] },
+              { label: "PLA PETG 扩链剂", items: ["MV-01", "MV-02"] }
+            ]
+          }
+        ];
+
+        const mbsQuickGrades = [
+          { brand: "钟渊", grade: "M-701", position: "通用型 PC 增韧", app: "通用 PC、PC/ABS 家电电子外壳" },
+          { brand: "钟渊", grade: "M-711", position: "低温冲击与热稳定", app: "寒冷地区部件、阻燃 PC、PC/PBT" },
+          { brand: "钟渊", grade: "M-722", position: "阻燃体系平衡型", app: "FR-PC/ABS 基础平衡方案" },
+          { brand: "钟渊", grade: "M-724", position: "耐化学与阻燃协同", app: "阻燃 PC/ABS、耐化学外壳" },
+          { brand: "钟渊", grade: "M-726", position: "r-PC/ABS 高冲击方案", app: "再生 PC、阻燃 PC/ABS 降添加量方案" },
+          { brand: "钟渊", grade: "M-732", position: "耐水解与长期可靠", app: "高湿热、长期使用、汽车周边" },
+          { brand: "LG化学", grade: "EM500", position: "工程塑料通用 MBS", app: "PC、PBT、PA、ABS 及 PC 合金增韧" }
+        ];
+
+        const mbsGradientMetrics = ["常温冲击", "低温冲击", "阻燃协同", "耐化学", "耐水解", "加工稳定"];
+
+        const mbsGradientRows = [
+          { grade: "M-701", scores: [5, 4, 3, 3, 2, 4] },
+          { grade: "M-711", scores: [4, 5, 4, 3, 4, 4] },
+          { grade: "M-722", scores: [3, 3, 4, 4, 3, 4] },
+          { grade: "M-724", scores: [4, 4, 5, 5, 3, 4] },
+          { grade: "M-726", scores: [4, 4, 4, 4, 3, 4] },
+          { grade: "M-732", scores: [4, 4, 4, 3, 5, 4] },
+          { grade: "EM500", scores: [4, 3, 3, 3, 3, 4] }
+        ];
+
+        const mbsScenarioRows = [
+          ["通用 PC/PCABS 增韧", "M-701 或 EM500", "性能均衡，工艺窗口友好，导入效率高"],
+          ["低温冲击要求（-30°C及以下）", "M-711 / M-732", "低温韧性保持更好，适合寒冷环境工况"],
+          ["阻燃 PC/ABS", "M-724 / M-726", "兼顾冲击、阻燃和耐化学，可平衡综合性能"],
+          ["高湿热与长期寿命", "M-732", "耐水解表现更优，适合长期稳定性要求"],
+          ["再生料体系稳定化", "M-726", "r-PC(/ABS)体系冲击提升明显，并支持降添加量优化"]
+        ];
+
+        const acrGradeCards = [
+          {
+            grade: "M577",
+            tag: "ACR升级型",
+            summary:
+              "FM40改良版本，PC体系中冲击、耐热和低黄变表现更优，适合外观与耐候并重场景。",
+            pc:
+              "PC应用：常温/低温冲击提升明显，白度更好，适合浅色和透明外观件。",
+            pbt:
+              "PBT应用：用于PC/PBT合金增韧时，兼顾冲击韧性、耐热窗口与表面细腻度。"
+          },
+          {
+            grade: "FM40",
+            tag: "ACR通用型",
+            summary:
+              "经典工程塑料增韧牌号，工艺窗口友好，导入快速，适合通用PC与PC/PBT体系。",
+            pc:
+              "PC应用：在保持工艺流动性的同时稳定提升冲击，适合成本敏感场景。",
+            pbt:
+              "PBT应用：在PC/PBT配方中提供基础增韧与加工稳定性，利于规模化生产。"
+          }
+        ];
+
+        const acrPcCompareRows = [
+          ["23°C冲击强度（PC,5%）", "62.4", "56.1", "M577更高（+11%）"],
+          ["-30°C冲击强度（PC,5%）", "48.7", "40.4", "M577更高（+20%）"],
+          ["1%失重温度", "294°C", "244°C", "M577耐热窗口更宽（+50°C）"],
+          ["黄色指数 YI", "0.9", "4.5", "M577低黄变，更适合浅色/透明体系"],
+          ["MFR（300°C,1.2kg）", "14.9", "18.3", "FM40流动性更高"]
+        ];
+
+        const acrPbtScenarioRows = [
+          [
+            "PC/PBT汽车电气外壳",
+            "冲击与耐热平衡更好，外观白度高",
+            "流动性与成本友好",
+            "性能优先选M577"
+          ],
+          [
+            "PC/PBT通用结构件",
+            "综合性能上限更高",
+            "导入快、配方宽容度高",
+            "量产起步可先FM40"
+          ],
+          ["PC/PBT浅色外观件", "低黄变更有优势", "偏黄风险相对更高", "优先M577"],
+          ["成本敏感项目", "性能冗余较高时可用", "综合成本更友好", "优先FM40"]
+        ];
+
+        const transparentRouteRows = [
+          [
+            "MBS路线",
+            "冲击提升效率高，低温韧性优势明显",
+            "透明度/雾度需要与配方联动平衡",
+            "透明PC或合金中的高冲击优先方案"
+          ],
+          [
+            "ACR路线",
+            "透明保持、耐候性和色泽稳定性更好",
+            "需关注折射率匹配与分散工艺",
+            "PMMA、PLA、PETG等透明体系"
+          ]
+        ];
+
+        const transparentGradeCards = [
+          {
+            grade: "M210",
+            tag: "PMMA透明增韧",
+            desc: "折射率匹配型，适合高透明PMMA体系，兼顾冲击提升与耐候稳定。"
+          },
+          {
+            grade: "M230",
+            tag: "PMMA透明增韧",
+            desc: "透明与韧性的平衡型路线，适合兼顾加工窗口和外观一致性的PMMA制品。"
+          },
+          {
+            grade: "MCI800",
+            tag: "PMMA透明增韧",
+            desc: "偏高韧性导向，适用于对抗跌落和抗开裂要求更高的透明PMMA方案。"
+          },
+          {
+            grade: "FM50",
+            tag: "PLA透明增韧",
+            desc: "用于PLA透明体系，在维持透光外观的同时提升韧性与加工稳定。"
+          },
+          {
+            grade: "M300",
+            tag: "PETG透明增韧",
+            desc: "PETG透明材料增韧方向，提升抗冲和抗应力开裂并保持光泽外观。"
+          }
+        ];
+
+        const transparentScenarioRows = [
+          ["透明PMMA高外观件", "M210 / M230", "优先透明保持与外观一致性"],
+          ["透明PMMA抗冲升级", "MCI800", "在透明前提下强化跌落与抗裂"],
+          ["透明PLA包装/片材", "FM50", "兼顾透明度、韧性与加工稳定"],
+          ["透明PETG展示/包装", "M300", "提升韧性并保持高光泽外观"]
+        ];
+
+        const ny10RecycledRows = [
+          ["FMT-210", "PA66再生通用级", "本色/浅色", "中低粘度，物性稳定，供应充足", "通用注塑、改性基料"],
+          ["FMT-220", "PIR PA66 高粘度", "乳白", "RV 2.8（2.6-3.0）；拉伸 82 MPa；缺口冲击 7.2 kJ/m²", "工业丝、高强工程件"],
+          ["FMT-230", "PIR PA66 黑色", "黑色", "RV 2.6（2.4-2.8）；拉伸 78 MPa；缺口冲击 6.8 kJ/m²", "汽车件、黑色结构件"]
+        ];
+
+        const ny10ModifierCards = [
+          {
+            name: "AX8900",
+            tag: "尼龙/PBT增韧相容",
+            desc: "E-AE-GMA反应型增韧相容剂，适用于PA、PBT、PET及其合金；可改善界面结合并提升冲击韧性。"
+          },
+          {
+            name: "SPG20",
+            tag: "低温尼龙增韧",
+            desc: "EPDM高接枝路线，低温（至-40°C）韧性表现突出；PA6/PA66常用添加量约12-20%。"
+          },
+          {
+            name: "高莱有机黑色母",
+            tag: "着色与外观稳定",
+            desc: "用于尼龙/PBT体系黑色着色，强调黑度、分散和表观一致性，适合外观件与结构件的一体化配色。"
+          }
+        ];
+
+        const ny10SolutionRows = [
+          ["黑色高韧PA66", "FMT-230 + SPG20 + 高莱有机黑色母", "兼顾低温抗冲、黑色外观与稳定加工"],
+          ["本色高强PA66", "FMT-220 + AX8900", "保持强度基础上提升韧性与相容性"],
+          ["尼龙/PBT合金改性", "AX8900 + SPG20", "改善相界结合并提高低温冲击表现"]
+        ];
+
+        const heat13KpiCards = [
+          {
+            title: "Vicat 107℃目标",
+            value: "IP 10% vs AMSAN 40%",
+            detail: "同等目标下添加量可减少约75%"
+          },
+          {
+            title: "Vicat 115℃目标",
+            value: "IP 20% vs AMSAN 72%",
+            detail: "高耐热路线仍保持低添加量优势"
+          },
+          {
+            title: "热稳定性",
+            value: "1%失重温度 350℃",
+            detail: "高温工艺窗口更宽，热史容忍度更高"
+          },
+          {
+            title: "注塑VOC（260℃）",
+            value: "IP约400 ppm",
+            detail: "对比AMSAN约1100 ppm，降幅约64%"
+          }
+        ];
+
+        const heat13BenchmarkRows = [
+          ["达到Vicat 107℃用量", "10%", "40%", "IP路线用量显著更低"],
+          ["达到Vicat 115℃用量", "20%", "72%", "高耐热场景优势更明显"],
+          ["1%失重温度", "350℃", "~280℃", "IP热稳定更好"],
+          ["MFR (220℃, 98N)", "6-12", "5", "IP工艺窗口更宽"],
+          ["Charpy冲击（同耐热）", "19-22", "12", "IP冲击保持更优"],
+          ["注塑挥发物（260℃）", "约400 ppm", "约1100 ppm", "IP更利于低气味项目"]
+        ];
+
+        const heat13VisualCards = [
+          {
+            title: "汽车内饰低VOC",
+            tag: "MS-NB",
+            image: "/images/generated/car_parts.jpg",
+            desc: "用于仪表板、门板、饰件等，兼顾高耐热与低气味要求。",
+            dosage: "15-20%",
+            point: "260℃注塑挥发物约400 ppm，较AMSAN路线显著更低"
+          },
+          {
+            title: "家电外壳耐热升级",
+            tag: "MS-NI / MS-CP",
+            image: "/images/generated/appliances.jpg",
+            desc: "适合电饭煲、吹风机等场景，耐热目标多在105-110℃。",
+            dosage: "10-15%",
+            point: "MS-NI高流动，MS-CP颗粒工艺友好"
+          },
+          {
+            title: "电子电器结构件",
+            tag: "MS-NB / MS-CP",
+            image: "/images/generated/led_lights.jpg",
+            desc: "用于充电器外壳、插座结构件，要求尺寸稳定和外观一致。",
+            dosage: "10-18%",
+            point: "Tg 196℃路线可提升高温尺寸稳定性"
+          },
+          {
+            title: "ABS/PA合金相容",
+            tag: "MS-NJ / MS-NJP",
+            image: "/images/generated/nylon_parts.jpg",
+            desc: "高MAH反应性用于相容改性，提升冲击和界面结合。",
+            dosage: "3-7%",
+            point: "PA6/ABS体系可同步提升延伸与Vicat表现"
+          }
+        ];
+
+        const heat13ApplicationRows = [
+          ["汽车内饰（低VOC）", "仪表板、门板、饰件", "MS-NB", "10-20%", "低挥发与低气味表现更好，适配汽车内饰要求"],
+          ["家电外壳（耐热105-110℃）", "电饭煲、吹风机、厨房小家电", "MS-NI / MS-CP", "8-15%", "兼顾耐热提升与加工效率，适合通用导入"],
+          ["电子电器（尺寸稳定）", "充电器、插座、结构壳体", "MS-NB / MS-CP", "10-18%", "在高耐热目标下保持较好的流动与冲击平衡"],
+          ["高耐热ABS方案", "Vicat 110℃以上项目", "MS-NB / MS-CP", "15-22%", "Tg 196℃路线，耐热提升效率更高"],
+          ["ABS/PA合金相容", "工具壳、运动器材、结构合金", "MS-NJ / MS-NJP", "3-7%", "高MAH反应性，提升相界结合与韧性"]
+        ];
+
+        const heat13GradeDiffRows = [
+          ["MS-NB", "粉末", "196℃", "3", "高耐热 + 低VOC优先", "汽车内饰、高耐热ABS"],
+          ["MS-CP", "颗粒", "196℃", "11", "高耐热 + 加工便利", "注重上料与清洁生产的ABS项目"],
+          ["MS-NI", "粉末", "185℃", "20", "标准耐热 + 高流动", "家电外壳、通用耐热ABS"],
+          ["MS-NIP", "颗粒", "185℃", "-", "标准耐热 + 颗粒易加工", "规模化量产的通用耐热方案"],
+          ["MS-NJ / MS-NJP", "粉末 / 颗粒", "196℃", "2 / -", "高反应性（相容剂方向）", "ABS/PA、PC/ABS等合金体系"]
+        ];
+
+        const heat13DecisionRows = [
+          ["Vicat >110℃且重视低VOC", "MS-NB", "MS-CP", "优先保障高耐热与气味控制"],
+          ["Vicat 105-110℃且追求高流动", "MS-NI", "MS-NIP", "导入速度快，适合通用耐热升级"],
+          ["自动化产线、粉尘敏感", "MS-CP / MS-NIP", "MS-NJP", "颗粒形态上料更稳定"],
+          ["ABS/PA合金相容需求", "MS-NJ / MS-NJP", "MS-NB", "高MAH反应性更利于界面结合"],
+          ["成本性能折中方案", "MS-NI + MS-CP复配", "MS-NB + MS-NI复配", "在目标Vicat下优化流动与成本"]
+        ];
+
+        const heat13PropertyRows = [
+          ["密度", "1.18", "ASTM D792"],
+          ["吸水率（23℃,50%RH,24h）", "0.68-0.70%", "ASTM D570"],
+          ["耐热提升效率", "每+1% IP ≈ Vicat +0.65~0.7℃", "ABS基础体系"],
+          ["推荐添加范围", "耐热改性10-20% / 相容剂3-7%", "量产前建议复测"]
+        ];
+
+        const heat13GradeCards = [
+          {
+            name: "MS-NB / MS-CP",
+            tag: "高耐热主力",
+            desc: "Tg 196℃路线。NB偏低VOC，CP偏颗粒工艺友好。"
+          },
+          {
+            name: "MS-NI / MS-NIP",
+            tag: "通用耐热主力",
+            desc: "Tg 185℃，适合105-110℃目标；NI流动高，NIP颗粒导入快。"
+          },
+          {
+            name: "MS-NJ / MS-NJP",
+            tag: "相容剂方向",
+            desc: "高MAH反应性，重点用于ABS/PA与工程合金相容改性。"
+          },
+          {
+            name: "配方复配策略",
+            tag: "量产优化",
+            desc: "可通过NB/NI或CP/NI组合在Vicat与MFR间做平衡。"
+          }
+        ];
+
+        const heat14ProcessWindowRows = [
+          [
+            "MS-NB / MS-CP",
+            "80℃",
+            "240℃",
+            "290℃",
+            "高耐热路线，需保证足够剪切与分散；推荐配合酚类+亚磷酸酯抗氧体系"
+          ],
+          [
+            "MS-NI / MS-NIP",
+            "80℃",
+            "240℃",
+            "275℃",
+            "标准耐热路线，流动性较好；关注分散均匀性与制品外观"
+          ],
+          [
+            "MS-NJ / MS-NJP",
+            "80℃",
+            "240℃",
+            "270℃",
+            "相容剂路线，避免过度热史；控制停留时间与含水率"
+          ]
+        ];
+
+        const heat14SopRows = [
+          ["1. 原料预处理", "ABS、SAN与IP充分干燥", "控制含水率与露点，避免银丝与降解风险"],
+          ["2. 双螺杆打样", "先固定喂料再调剪切和温度", "先确保分散，再优化流动与外观"],
+          ["3. 注塑窗口确认", "250-270℃做三点验证", "同步评估外观、Vicat、冲击和VOC"],
+          ["4. 放大与回用", "设定回用料比例上限", "按批次追踪颜色、气味和力学波动"]
+        ];
+
+        const heat14VisualCards = [
+          {
+            title: "原料预处理",
+            tag: "干燥控制",
+            image: "/images/generated/plastic_pellets.jpg",
+            desc: "ABS、SAN与IP预干燥是稳定加工的第一步。",
+            key: "目标",
+            value: "减少银丝、气泡与热降解"
+          },
+          {
+            title: "双螺杆造粒",
+            tag: "分散优先",
+            image: "/images/generated/factory.jpg",
+            desc: "先稳定喂料与混炼，再微调温度与转速。",
+            key: "窗口",
+            value: "MS-NB/CP后段建议290℃"
+          },
+          {
+            title: "注塑闭环验证",
+            tag: "三点确认",
+            image: "/images/generated/lab.jpg",
+            desc: "建议250/260/270℃三点验证外观和力学。",
+            key: "指标",
+            value: "外观+Vicat+冲击+VOC同步评估"
+          }
+        ];
+
+        const heat14ProcessChecklist = [
+          {
+            title: "混炼强度",
+            detail: "双螺杆建议保留有效混炼段，保证IP在基体中的细化分散。"
+          },
+          {
+            title: "抗氧体系",
+            detail: "建议复配酚类+亚磷酸酯，降低ABS热降解与黄变风险。"
+          },
+          {
+            title: "温度与停留",
+            detail: "避免单纯拉高温度，优先缩短停留时间并稳定熔体峰值。"
+          },
+          {
+            title: "过滤与排气",
+            detail: "建议60目以上滤网并维持排气效率，减少凝胶与挥发残留。"
+          },
+          {
+            title: "计量稳定",
+            detail: "控制主辅料喂料波动，避免局部过浓导致外观与力学异常。"
+          },
+          {
+            title: "回用料管理",
+            detail: "设定回用比例上限，避免长期累积导致VOC与色差漂移。"
+          }
+        ];
+
+        const heat14IssueRows = [
+          ["表面颗粒/麻点", "IP分散不充分或局部温度偏低", "提升中后段温度并优化混炼元件，必要时降低瞬时喂料波动"],
+          ["冲击下降明显", "热史过长或抗氧体系不足", "降低停留时间并补强抗氧体系，复核螺杆剪切强度"],
+          ["颜色偏黄", "加工温度过高或氧化降解", "下调熔体峰值温度，优先采用低黄变抗氧包并缩短料筒停留"],
+          ["VOC偏高", "配方耐热剂路线不匹配或加工窗口偏激进", "优先MS-NB路线并复核注塑温度、排气及回用料比例"],
+          ["流动不足", "高耐热配方添加量高导致黏度上升", "切换MS-CP或与MS-NI复配，保持目标Vicat前提下优化MFR"]
+        ];
+
+        const escapeHtml = (value) =>
+          String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/\"/g, "&quot;")
+            .replace(/'/g, "&#39;");
+
+        const getCurrentPageNumber = () => {
+          const marker = document.querySelector("header .text-lg.font-bold.text-red-600");
+          if (!marker) return null;
+          const pageNum = Number.parseInt(marker.textContent.trim(), 10);
+          return Number.isFinite(pageNum) ? pageNum : null;
+        };
+
+        const getCurrentA4Page = () => document.querySelector("main .a4-page");
+
+        const renderCompanyMetrics = (row) => {
+          row.innerHTML = companyMetrics
+            .map((label) => `<div class="company-kpi-chip">${escapeHtml(label)}</div>`)
+            .join("");
+        };
+
+        const patchCompanyProfile = (page) => {
+          const introBlock = page.querySelector(".space-y-5");
+          if (!introBlock) return;
+
+          const introSignature = companyIntroParagraphs.join("|");
+          if (introBlock.dataset.customIntro !== introSignature) {
+            introBlock.innerHTML = companyIntroParagraphs
+              .map(
+                (text) =>
+                  `<p class="company-intro-paragraph text-gray-700 leading-relaxed text-sm">${escapeHtml(text)}</p>`
+              )
+              .join("");
+            introBlock.dataset.customIntro = introSignature;
+          }
+
+          const host = introBlock.parentElement || page.querySelector(".flex-1");
+          if (!host) return;
+
+          const oldCards = page.querySelector(".grid.grid-cols-3.gap-4.mt-6");
+          let kpiRow = page.querySelector(".company-kpi-row");
+          if (!kpiRow) {
+            kpiRow = document.createElement("div");
+            kpiRow.className = "company-kpi-row";
+            if (oldCards && oldCards.nextSibling) {
+              host.insertBefore(kpiRow, oldCards.nextSibling);
+            } else if (oldCards) {
+              host.appendChild(kpiRow);
+            } else if (introBlock.nextSibling) {
+              host.insertBefore(kpiRow, introBlock.nextSibling);
+            } else {
+              host.appendChild(kpiRow);
+            }
+          }
+
+          const rendered = Array.from(kpiRow.children).map((node) => (node.textContent || "").trim());
+          if (rendered.join("|") !== companyMetrics.join("|")) {
+            renderCompanyMetrics(kpiRow);
+          }
+        };
+
+        const renderSupplierCard = (name) => {
+          const logo = supplierLogoMap[name];
+          if (logo) {
+            return `
+              <div class="supplier-card">
+                <div class="supplier-logo-wrap">
+                  <img class="supplier-logo" src="${escapeHtml(logo)}" alt="${escapeHtml(name)} logo" loading="lazy" decoding="async" />
+                </div>
+                <div class="supplier-name">${escapeHtml(name)}</div>
+              </div>
+            `;
+          }
+          return `
+            <div class="supplier-card">
+              <div class="supplier-logo-wrap">
+                <div class="supplier-fallback-mark">LOGO</div>
+              </div>
+              <div class="supplier-name">${escapeHtml(name)}</div>
+            </div>
+          `;
+        };
+
+        const patchSuppliersPage = (page) => {
+          const body = page.querySelector(".flex-1");
+          if (!body) return;
+
+          const headerTitle = page.querySelector(".header-title");
+          const headerSubtitle = page.querySelector(".header-subtitle");
+          if (headerTitle) headerTitle.textContent = "合作供应商";
+          if (headerSubtitle) headerSubtitle.textContent = "Core Supplier Matrix";
+
+          const signature = supplierList.join("|");
+          if (body.dataset.customSuppliers === signature) return;
+          body.dataset.customSuppliers = signature;
+
+          body.innerHTML = `
+            <div class="supplier-page-intro">
+              围绕工程塑料与改性助剂业务，我们建立了覆盖树脂、功能助剂和专用材料的供应体系。以下为当前重点合作供应商：
+            </div>
+            <div class="supplier-grid">
+              ${supplierList.map((name) => renderSupplierCard(name)).join("")}
+            </div>
+          `;
+        };
+
+        const renderCatalogSection = (section) => {
+          const groups = section.groups
+            .map((group) => {
+              const itemsHtml = group.items.length
+                ? group.items.map((item) => `<span class="catalog-chip">${escapeHtml(item)}</span>`).join("")
+                : '<span class="catalog-chip is-empty">待补充</span>';
+              return `
+                <div class="catalog-group">
+                  <div class="catalog-group-title">${escapeHtml(group.label)}</div>
+                  <div class="catalog-group-items">${itemsHtml}</div>
+                </div>
+              `;
+            })
+            .join("");
+
+          return `
+            <section class="catalog-section">
+              <div class="catalog-section-head">
+                <h3 class="catalog-section-title">${escapeHtml(section.title)}</h3>
+                <p class="catalog-section-subtitle">Product category matrix</p>
+              </div>
+              <div class="catalog-section-body">
+                ${groups}
+              </div>
+            </section>
+          `;
+        };
+
+        const patchCatalogPage = (page, config) => {
+          const body = page.querySelector(".flex-1");
+          if (!body) return;
+
+          const headerTitle = page.querySelector(".header-title");
+          const headerSubtitle = page.querySelector(".header-subtitle");
+          if (headerTitle) headerTitle.textContent = config.headerTitle;
+          if (headerSubtitle) headerSubtitle.textContent = config.headerSubtitle;
+
+          if (body.dataset.customCatalog === config.key) return;
+          body.dataset.customCatalog = config.key;
+
+          body.innerHTML = `
+            <div class="catalog-custom-page">
+              ${config.sections.map((section) => renderCatalogSection(section)).join("")}
+            </div>
+          `;
+        };
+
+        const patchMbsIntroPage = (page) => {
+          const body = page.querySelector(".flex-1");
+          if (!body) return;
+
+          const headerTitle = page.querySelector(".header-title");
+          const headerSubtitle = page.querySelector(".header-subtitle");
+          if (headerTitle) headerTitle.textContent = "MBS增韧剂简介";
+          if (headerSubtitle) headerSubtitle.textContent = "Composition, Function & Toughening Mechanism";
+
+          if (body.dataset.customMbsIntro === "mbs-intro-v2") return;
+          body.dataset.customMbsIntro = "mbs-intro-v2";
+
+          body.innerHTML = `
+            <div class="mbs-intro-page">
+              <div class="mbs-intro-lead">
+                MBS（甲基丙烯酸甲酯-丁二烯-苯乙烯）是工程塑料中常用的核壳型增韧剂，
+                主要用于提升PC/ABS、ABS、ASA等体系在常温和低温下的冲击韧性，同时兼顾流动、外观和加工稳定性。
+              </div>
+              <div class="mbs-intro-grid">
+                <section class="mbs-card">
+                  <h3 class="mbs-card-title">组成成分</h3>
+                  <ul class="mbs-composition-list">
+                    <li>核壳结构：外层硬壳相 + 内层橡胶核相。</li>
+                    <li>典型核相为丁二烯橡胶，负责吸收冲击能量。</li>
+                    <li>壳层极性与粒径分布可按应用体系定制。</li>
+                    <li>常见橡胶相含量约 40%~70%。</li>
+                  </ul>
+                </section>
+                <section class="mbs-card">
+                  <h3 class="mbs-card-title">主要功能</h3>
+                  <p>显著提升缺口冲击强度，改善低温韧性；兼顾制品表面光泽、色泽与加工流动；在阻燃PC/ABS中可实现性能与添加量的平衡。</p>
+                </section>
+                <section class="mbs-card" style="grid-column: 1 / -1;">
+                  <h3 class="mbs-card-title">增韧机理（简述）</h3>
+                  <div class="mbs-flow">
+                    <div class="mbs-flow-step">冲击载荷作用于基体，MBS橡胶核首先发生形变</div>
+                    <div class="mbs-flow-step">界面诱发银纹/微空穴并吸收冲击能</div>
+                    <div class="mbs-flow-step">触发基体剪切屈服，阻止裂纹快速扩展</div>
+                    <div class="mbs-flow-step">实现“韧性提升 + 外观保持”的综合增韧效果</div>
+                  </div>
+                </section>
+              </div>
+              <div class="mbs-figure-grid">
+                <section class="mbs-figure-card" style="grid-column: 1 / -1;">
+                  <div class="mbs-figure-head">
+                    <h4 class="mbs-figure-title">核壳结构与增韧机理示意图</h4>
+                    <p class="mbs-figure-subtitle">Core-shell structure & toughening mechanism</p>
+                  </div>
+                  <div class="mbs-figure-body">
+                    <img src="/images/pics/mbs/figure-mbs-core-shell-mechanism.png" alt="MBS核壳结构与增韧机理示意图" loading="lazy" decoding="async" />
+                  </div>
+                </section>
+              </div>
+            </div>
+          `;
+        };
+
+        const renderGradientCell = (score) => {
+          const val = Number(score) || 0;
+          const width = Math.max(0, Math.min(5, val)) * 20;
+          return `
+            <div class="mbs7-grade-cell">
+              <div class="mbs7-gradient-track">
+                <div class="mbs7-gradient-bar" style="width:${width}%"></div>
+              </div>
+              <span class="mbs7-grade-score">${val}/5</span>
+            </div>
+          `;
+        };
+
+        const patchMbsComparePage = (page) => {
+          const body = page.querySelector(".flex-1");
+          if (!body) return;
+
+          const headerTitle = page.querySelector(".header-title");
+          const headerSubtitle = page.querySelector(".header-subtitle");
+          if (headerTitle) headerTitle.textContent = "MBS牌号速览与物性梯度对比";
+          if (headerSubtitle) headerSubtitle.textContent = "Quick View, Gradient Comparison & Scenario Recommendation";
+
+          if (body.dataset.customMbsCompare === "mbs-compare-v3") return;
+          body.dataset.customMbsCompare = "mbs-compare-v3";
+
+          const quickRows = mbsQuickGrades
+            .map(
+              (item) => `
+                <tr>
+                  <td>${escapeHtml(item.brand)}</td>
+                  <td>${escapeHtml(item.grade)}</td>
+                  <td>${escapeHtml(item.position)}</td>
+                  <td>${escapeHtml(item.app)}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const gradientHead = mbsGradientMetrics.map((item) => `<th>${escapeHtml(item)}</th>`).join("");
+          const gradientRows = mbsGradientRows
+            .map(
+              (row) => `
+                <tr class="mbs7-gradient-row">
+                  <td>${escapeHtml(row.grade)}</td>
+                  ${row.scores.map((score) => `<td>${renderGradientCell(score)}</td>`).join("")}
+                </tr>
+              `
+            )
+            .join("");
+
+          const scenarioRows = mbsScenarioRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          body.innerHTML = `
+            <div class="mbs7-page">
+              <section class="mbs7-card">
+                <div class="mbs7-card-head">
+                  <h3 class="mbs7-card-title">重点牌号速览</h3>
+                  <p class="mbs7-card-subtitle">Key grade matrix</p>
+                </div>
+                <div class="mbs7-body">
+                  <table class="mbs7-table">
+                    <thead>
+                      <tr>
+                        <th>品牌</th>
+                        <th>牌号</th>
+                        <th>定位</th>
+                        <th>推荐应用</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${quickRows}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="mbs7-card">
+                <div class="mbs7-card-head">
+                  <h3 class="mbs7-card-title">PC/ABS 物性梯度对比（相对）</h3>
+                  <p class="mbs7-card-subtitle">红色越深、条越长表示相对表现越优</p>
+                </div>
+                <div class="mbs7-body">
+                  <table class="mbs7-table">
+                    <thead>
+                      <tr>
+                        <th>牌号</th>
+                        ${gradientHead}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${gradientRows}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="mbs7-card">
+                <div class="mbs7-card-head">
+                  <h3 class="mbs7-card-title">场景推荐</h3>
+                  <p class="mbs7-card-subtitle">Application recommendation</p>
+                </div>
+                <div class="mbs7-body">
+                  <table class="mbs7-table mbs7-reco-table">
+                    <thead>
+                      <tr>
+                        <th>客户场景</th>
+                        <th>推荐牌号</th>
+                        <th>推荐理由</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${scenarioRows}
+                    </tbody>
+                  </table>
+                  <p class="mbs-compare-note">注：梯度为相对评级（5级最高），用于选型方向判断；量产前请按目标配方做打样复测。</p>
+                </div>
+              </section>
+            </div>
+          `;
+        };
+
+        const renderOverlayPage = (body, overlayClass, signature, html) => {
+          const currentChildren = Array.from(body.children);
+          currentChildren.forEach((child) => {
+            if (!child.classList || !child.classList.contains("custom-page-overlay")) return;
+            if (!child.classList.contains(overlayClass)) {
+              child.remove();
+            }
+          });
+
+          let overlay = body.querySelector(`.custom-page-overlay.${overlayClass}`);
+          if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.className = `custom-page-overlay ${overlayClass}`;
+            body.appendChild(overlay);
+          }
+
+          Array.from(body.children).forEach((child) => {
+            if (child === overlay) return;
+            if (child.classList && child.classList.contains("custom-page-overlay")) return;
+            child.style.display = "none";
+          });
+
+          if (overlay.dataset.signature !== signature) {
+            overlay.innerHTML = html;
+            overlay.dataset.signature = signature;
+          }
+        };
+
+        const patchAcrPcPbtPage = (page) => {
+          const body = page.querySelector(".flex-1");
+          if (!body) return;
+
+          const headerTitle = page.querySelector(".header-title");
+          const headerSubtitle = page.querySelector(".header-subtitle");
+          if (headerTitle) headerTitle.textContent = "ACR增韧剂：M577 / FM40";
+          if (headerSubtitle) headerSubtitle.textContent = "PC & PC/PBT Application and Performance";
+
+          const gradeCards = acrGradeCards
+            .map(
+              (item) => `
+                <section class="acr8-grade-card">
+                  <div class="acr8-grade-head">
+                    <h3 class="acr8-grade-name">${escapeHtml(item.grade)}</h3>
+                    <span class="acr8-grade-tag">${escapeHtml(item.tag)}</span>
+                  </div>
+                  <p>${escapeHtml(item.summary)}</p>
+                  <p style="margin-top:0.2rem;"><strong>PC：</strong>${escapeHtml(item.pc)}</p>
+                  <p style="margin-top:0.16rem;"><strong>PC/PBT：</strong>${escapeHtml(item.pbt)}</p>
+                </section>
+              `
+            )
+            .join("");
+
+          const pcRows = acrPcCompareRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                  <td>${escapeHtml(row[3])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const pbtRows = acrPbtScenarioRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                  <td>${escapeHtml(row[3])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const pageHtml = `
+            <div class="acr8-page">
+              <div class="acr8-lead">
+                M577与FM40均为钟渊ACR路线的工程塑料增韧剂。M577定位为FM40升级型号，强调冲击、耐热和低黄变；
+                FM40定位通用增韧，强调导入效率和工艺友好。以下内容聚焦其在PC与PC/PBT体系中的应用与性能差异。
+              </div>
+
+              <div class="acr8-grade-grid">
+                ${gradeCards}
+              </div>
+
+              <section class="acr8-section">
+                <div class="acr8-section-head">
+                  <h3 class="acr8-section-title">PC体系关键数据（5%添加）</h3>
+                  <p class="acr8-section-subtitle">M577 vs FM40</p>
+                </div>
+                <div class="acr8-section-body">
+                  <table class="acr8-table">
+                    <thead>
+                      <tr>
+                        <th>指标</th>
+                        <th>M577</th>
+                        <th>FM40</th>
+                        <th>结论</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${pcRows}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="acr8-section">
+                <div class="acr8-section-head">
+                  <h3 class="acr8-section-title">PC/PBT应用建议</h3>
+                  <p class="acr8-section-subtitle">Application recommendation</p>
+                </div>
+                <div class="acr8-section-body">
+                  <table class="acr8-table">
+                    <thead>
+                      <tr>
+                        <th>应用场景</th>
+                        <th>M577表现</th>
+                        <th>FM40表现</th>
+                        <th>选型建议</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${pbtRows}
+                    </tbody>
+                  </table>
+                  <p class="acr-note">注：PC/PBT表现为工程选型导向，具体数据请按目标配方与加工条件复测确认。</p>
+                </div>
+              </section>
+            </div>
+          `;
+
+          renderOverlayPage(body, "acr8-overlay", "acr-page-8-v2", pageHtml);
+        };
+
+        const patchTransparentTougheningPage = (page) => {
+          const body = page.querySelector(".flex-1");
+          if (!body) return;
+
+          const headerTitle = page.querySelector(".header-title");
+          const headerSubtitle = page.querySelector(".header-subtitle");
+          if (headerTitle) headerTitle.textContent = "透明材料增韧：MBS & ACR";
+          if (headerSubtitle) headerSubtitle.textContent = "PMMA / PLA / PETG Solutions";
+
+          const routeRows = transparentRouteRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                  <td>${escapeHtml(row[3])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const gradeCards = transparentGradeCards
+            .map(
+              (item) => `
+                <section class="acr9-grade-card">
+                  <div class="acr9-grade-head">
+                    <h3 class="acr9-grade-name">${escapeHtml(item.grade)}</h3>
+                    <span class="acr9-grade-tag">${escapeHtml(item.tag)}</span>
+                  </div>
+                  <p>${escapeHtml(item.desc)}</p>
+                </section>
+              `
+            )
+            .join("");
+
+          const scenarioRows = transparentScenarioRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const pageHtml = `
+            <div class="acr9-page">
+              <div class="acr9-lead">
+                透明材料增韧通常采用MBS与ACR两条路线：MBS侧重冲击效率，ACR更强调透明保持与耐候稳定。
+                本页聚焦透明应用中的重点牌号：PMMA（M210/M230/MCI800）、PLA（FM50）、PETG（M300）。
+              </div>
+
+              <section class="acr9-section">
+                <div class="acr9-section-head">
+                  <h3 class="acr9-section-title">透明增韧路线对比</h3>
+                  <p class="acr9-section-subtitle">MBS vs ACR</p>
+                </div>
+                <div class="acr9-section-body">
+                  <table class="acr9-table acr9-route-table">
+                    <thead>
+                      <tr>
+                        <th>路线</th>
+                        <th>优势</th>
+                        <th>关注点</th>
+                        <th>典型应用</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${routeRows}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <div class="acr9-grade-grid">
+                ${gradeCards}
+              </div>
+
+              <section class="acr9-section">
+                <div class="acr9-section-head">
+                  <h3 class="acr9-section-title">场景推荐</h3>
+                  <p class="acr9-section-subtitle">Transparent material recommendation</p>
+                </div>
+                <div class="acr9-section-body">
+                  <table class="acr9-table acr9-scenario-table">
+                    <thead>
+                      <tr>
+                        <th>客户场景</th>
+                        <th>推荐牌号</th>
+                        <th>推荐理由</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${scenarioRows}
+                    </tbody>
+                  </table>
+                  <p class="acr-note">注：透明体系对树脂本体、分散工艺和干燥条件敏感，建议按目标光学指标进行小试与放大验证。</p>
+                </div>
+              </section>
+            </div>
+          `;
+
+          renderOverlayPage(body, "acr9-overlay", "acr-page-9-v2", pageHtml);
+        };
+
+        const patchNylonPbtPage = (page) => {
+          const body = page.querySelector(".flex-1");
+          if (!body) return;
+
+          const headerTitle = page.querySelector(".header-title");
+          const headerSubtitle = page.querySelector(".header-subtitle");
+          if (headerTitle) headerTitle.textContent = "PA66再生系列产品";
+          if (headerSubtitle) headerSubtitle.textContent = "Recycled PA66 Portfolio + Nylon/PBT Modification";
+
+          const recycledRows = ny10RecycledRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                  <td>${escapeHtml(row[3])}</td>
+                  <td>${escapeHtml(row[4])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const modifierCards = ny10ModifierCards
+            .map(
+              (item) => `
+                <section class="ny10-chip-card">
+                  <div class="ny10-chip-head">
+                    <h3 class="ny10-chip-name">${escapeHtml(item.name)}</h3>
+                    <span class="ny10-chip-tag">${escapeHtml(item.tag)}</span>
+                  </div>
+                  <p>${escapeHtml(item.desc)}</p>
+                </section>
+              `
+            )
+            .join("");
+
+          const solutionRows = ny10SolutionRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const pageHtml = `
+            <div class="ny10-page">
+              <div class="ny10-lead">
+                本页以PA66再生系列为主，汇总FMT-210/FMT-220/FMT-230的定位与关键信息。
+                余下版面整合尼龙/PBT改性常用助剂（AX8900、SPG20）及高莱有机黑色母，方便一页完成选型沟通。
+              </div>
+
+              <section class="ny10-card">
+                <div class="ny10-card-head">
+                  <h3 class="ny10-card-title">PA66再生系列总览</h3>
+                  <p class="ny10-card-subtitle">FMT-210 / FMT-220 / FMT-230</p>
+                </div>
+                <div class="ny10-card-body">
+                  <table class="ny10-table">
+                    <thead>
+                      <tr>
+                        <th>牌号</th>
+                        <th>类型</th>
+                        <th>外观</th>
+                        <th>关键数据</th>
+                        <th>典型应用</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${recycledRows}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="ny10-card">
+                <div class="ny10-card-head">
+                  <h3 class="ny10-card-title">增韧与着色助剂介绍</h3>
+                  <p class="ny10-card-subtitle">AX8900 / SPG20 / 高莱有机黑色母</p>
+                </div>
+                <div class="ny10-card-body">
+                  <div class="ny10-chip-grid">
+                    ${modifierCards}
+                  </div>
+                </div>
+              </section>
+
+              <section class="ny10-card">
+                <div class="ny10-card-head">
+                  <h3 class="ny10-card-title">推荐组合方案</h3>
+                  <p class="ny10-card-subtitle">Nylon & PBT formulation direction</p>
+                </div>
+                <div class="ny10-card-body">
+                  <table class="ny10-table">
+                    <thead>
+                      <tr>
+                        <th>客户需求</th>
+                        <th>推荐组合</th>
+                        <th>方案重点</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${solutionRows}
+                    </tbody>
+                  </table>
+                  <p class="ny10-note">注：推荐组合为方向性建议，量产前请按目标树脂与加工条件进行配方验证。</p>
+                </div>
+              </section>
+            </div>
+          `;
+
+          renderOverlayPage(body, "ny10-overlay", "ny10-page-v1", pageHtml);
+        };
+
+        const patchMergedPage11 = (page) => {
+          const body = page.querySelector(".flex-1");
+          if (!body) return;
+
+          const headerTitle = page.querySelector(".header-title");
+          const headerSubtitle = page.querySelector(".header-subtitle");
+          if (headerTitle) headerTitle.textContent = "";
+          if (headerSubtitle) headerSubtitle.textContent = "";
+
+          const pageHtml = `
+            <div class="merged-page-empty">本页内容已并入第10页</div>
+          `;
+          renderOverlayPage(body, "page11-overlay", "page11-empty-v1", pageHtml);
+        };
+
+        const restoreOriginalPageView = (page) => {
+          const body = page.querySelector(".flex-1");
+          if (!body) return;
+
+          Array.from(body.querySelectorAll(".custom-page-overlay")).forEach((node) => node.remove());
+          Array.from(body.children).forEach((child) => {
+            if (!child || !child.style) return;
+            child.style.display = "";
+          });
+        };
+
+        const patchHeatPage13 = (page) => {
+          const body = page.querySelector(".flex-1");
+          if (!body) return;
+
+          const headerTitle = page.querySelector(".header-title");
+          const headerSubtitle = page.querySelector(".header-subtitle");
+          if (headerTitle) headerTitle.textContent = "耐热剂应用与牌号差异";
+          if (headerSubtitle) headerSubtitle.textContent = "Application Focus + Grade Selection";
+
+          const kpiCards = heat13KpiCards
+            .map(
+              (item) => `
+                <section class="heat-kpi-card">
+                  <p class="heat-kpi-title">${escapeHtml(item.title)}</p>
+                  <p class="heat-kpi-value">${escapeHtml(item.value)}</p>
+                  <p class="heat-kpi-detail">${escapeHtml(item.detail)}</p>
+                </section>
+              `
+            )
+            .join("");
+
+          const benchmarkRows = heat13BenchmarkRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                  <td>${escapeHtml(row[3])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const visualCards = heat13VisualCards
+            .map(
+              (item) => `
+                <section class="heat-visual-card">
+                  <div class="heat-visual-media">
+                    <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="heat-visual-body">
+                    <div class="heat-visual-head">
+                      <h4 class="heat-visual-title">${escapeHtml(item.title)}</h4>
+                      <span class="heat-visual-tag">${escapeHtml(item.tag)}</span>
+                    </div>
+                    <p class="heat-visual-desc">${escapeHtml(item.desc)}</p>
+                    <p class="heat-visual-meta"><strong>建议添加：</strong>${escapeHtml(item.dosage)}</p>
+                    <p class="heat-visual-meta"><strong>知识点：</strong>${escapeHtml(item.point)}</p>
+                  </div>
+                </section>
+              `
+            )
+            .join("");
+
+          const applicationRows = heat13ApplicationRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                  <td>${escapeHtml(row[3])}</td>
+                  <td>${escapeHtml(row[4])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const propertyRows = heat13PropertyRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const gradeDiffRows = heat13GradeDiffRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                  <td>${escapeHtml(row[3])}</td>
+                  <td>${escapeHtml(row[4])}</td>
+                  <td>${escapeHtml(row[5])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const decisionRows = heat13DecisionRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                  <td>${escapeHtml(row[3])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const gradeCards = heat13GradeCards
+            .map(
+              (item) => `
+                <section class="heat-chip">
+                  <h4>${escapeHtml(item.name)} · ${escapeHtml(item.tag)}</h4>
+                  <p>${escapeHtml(item.desc)}</p>
+                </section>
+              `
+            )
+            .join("");
+
+          const pageHtml = `
+            <div class="ny10-page">
+              <div class="ny10-lead">
+                耐热改性体系在ABS/ASA/AES中，关键目标是以更低添加量实现耐热提升，同时维持冲击与加工窗口。
+                本页聚焦性能数据、应用映射与选型决策，用于技术方案对比和导入评估。
+              </div>
+
+              <section class="ny10-card">
+                <div class="ny10-card-head">
+                  <h3 class="ny10-card-title">耐热改性性能对比（NPMI路线 vs AMSAN）</h3>
+                  <p class="ny10-card-subtitle">Performance benchmark</p>
+                </div>
+                <div class="ny10-card-body">
+                  <div class="heat-kpi-grid">
+                    ${kpiCards}
+                  </div>
+                  <table class="ny10-table heat-stack-table">
+                    <thead>
+                      <tr>
+                        <th>比较项</th>
+                        <th>Denka IP</th>
+                        <th>AMSAN</th>
+                        <th>结论</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${benchmarkRows}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="ny10-card">
+                <div class="ny10-card-head">
+                  <h3 class="ny10-card-title">应用场景图文速览</h3>
+                  <p class="ny10-card-subtitle">Application cards + mapping</p>
+                </div>
+                <div class="ny10-card-body">
+                  <div class="heat-visual-grid">
+                    ${visualCards}
+                  </div>
+                  <table class="ny10-table">
+                    <thead>
+                      <tr>
+                        <th>应用方向</th>
+                        <th>典型产品</th>
+                        <th>推荐牌号</th>
+                        <th>建议添加量</th>
+                        <th>技术要点</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${applicationRows}
+                    </tbody>
+                  </table>
+                  <p class="ny10-note">注：图卡内容来自耐热剂知识库的应用与测试数据，便于销售和技术沟通时快速引用。</p>
+                </div>
+              </section>
+
+              <section class="ny10-card">
+                <div class="ny10-card-head">
+                  <h3 class="ny10-card-title">牌号差异与选型决策</h3>
+                  <p class="ny10-card-subtitle">Grade differences + decision matrix</p>
+                </div>
+                <div class="ny10-card-body">
+                  <table class="ny10-table">
+                    <thead>
+                      <tr>
+                        <th>牌号</th>
+                        <th>形态</th>
+                        <th>Tg</th>
+                        <th>MFR</th>
+                        <th>定位</th>
+                        <th>推荐场景</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${gradeDiffRows}
+                    </tbody>
+                  </table>
+
+                  <table class="ny10-table heat-stack-table">
+                    <thead>
+                      <tr>
+                        <th>需求特征</th>
+                        <th>优先牌号</th>
+                        <th>备选牌号</th>
+                        <th>判断依据</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${decisionRows}
+                    </tbody>
+                  </table>
+
+                  <table class="ny10-table heat-stack-table">
+                    <thead>
+                      <tr>
+                        <th>知识库关键参数</th>
+                        <th>数据</th>
+                        <th>来源/方法</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${propertyRows}
+                    </tbody>
+                  </table>
+
+                  <div class="heat-chip-grid heat-stack-table">
+                    ${gradeCards}
+                  </div>
+                  <p class="ny10-note">注：添加量与最终Vicat、冲击、流动性相关，建议以目标物性为约束做小试DOE确认。</p>
+                </div>
+              </section>
+            </div>
+          `;
+
+          renderOverlayPage(body, "heat13-overlay", "heat-page-13-v3", pageHtml);
+        };
+
+        const patchHeatPage14 = (page) => {
+          const body = page.querySelector(".flex-1");
+          if (!body) return;
+
+          const headerTitle = page.querySelector(".header-title");
+          const headerSubtitle = page.querySelector(".header-subtitle");
+          if (headerTitle) headerTitle.textContent = "耐热剂加工建议与问题处理";
+          if (headerSubtitle) headerSubtitle.textContent = "Processing Window + Troubleshooting";
+
+          const processRows = heat14ProcessWindowRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                  <td>${escapeHtml(row[3])}</td>
+                  <td>${escapeHtml(row[4])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const sopRows = heat14SopRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const visualCards = heat14VisualCards
+            .map(
+              (item) => `
+                <section class="heat-visual-card">
+                  <div class="heat-visual-media">
+                    <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="heat-visual-body">
+                    <div class="heat-visual-head">
+                      <h4 class="heat-visual-title">${escapeHtml(item.title)}</h4>
+                      <span class="heat-visual-tag">${escapeHtml(item.tag)}</span>
+                    </div>
+                    <p class="heat-visual-desc">${escapeHtml(item.desc)}</p>
+                    <p class="heat-visual-meta"><strong>${escapeHtml(item.key)}：</strong>${escapeHtml(item.value)}</p>
+                  </div>
+                </section>
+              `
+            )
+            .join("");
+
+          const checklistCards = heat14ProcessChecklist
+            .map(
+              (item) => `
+                <section class="heat-chip">
+                  <h4>${escapeHtml(item.title)}</h4>
+                  <p>${escapeHtml(item.detail)}</p>
+                </section>
+              `
+            )
+            .join("");
+
+          const issueRows = heat14IssueRows
+            .map(
+              (row) => `
+                <tr>
+                  <td>${escapeHtml(row[0])}</td>
+                  <td>${escapeHtml(row[1])}</td>
+                  <td>${escapeHtml(row[2])}</td>
+                </tr>
+              `
+            )
+            .join("");
+
+          const pageHtml = `
+            <div class="ny10-page">
+              <div class="ny10-lead">
+                耐热剂体系放大时，稳定分散与热史控制比“单纯拉高温度”更关键。
+                本页给出造粒窗口、打样SOP和常见问题处理建议，用于试产与量产对齐。
+              </div>
+
+              <section class="ny10-card">
+                <div class="ny10-card-head">
+                  <h3 class="ny10-card-title">造粒温度窗口（双螺杆）</h3>
+                  <p class="ny10-card-subtitle">Extrusion temperature guideline</p>
+                </div>
+                <div class="ny10-card-body">
+                  <table class="ny10-table">
+                    <thead>
+                      <tr>
+                        <th>牌号组</th>
+                        <th>C2</th>
+                        <th>C3</th>
+                        <th>C4+目标</th>
+                        <th>工艺重点</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${processRows}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="ny10-card">
+                <div class="ny10-card-head">
+                  <h3 class="ny10-card-title">打样SOP与过程检查</h3>
+                  <p class="ny10-card-subtitle">Sampling SOP + process checklist</p>
+                </div>
+                <div class="ny10-card-body">
+                  <div class="heat-visual-grid is-three">
+                    ${visualCards}
+                  </div>
+                  <table class="ny10-table">
+                    <thead>
+                      <tr>
+                        <th>阶段</th>
+                        <th>关键动作</th>
+                        <th>目标结果</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${sopRows}
+                    </tbody>
+                  </table>
+                  <div class="heat-chip-grid heat-stack-table">
+                    ${checklistCards}
+                  </div>
+                </div>
+              </section>
+
+              <section class="ny10-card">
+                <div class="ny10-card-head">
+                  <h3 class="ny10-card-title">常见问题与调整方向</h3>
+                  <p class="ny10-card-subtitle">Troubleshooting</p>
+                </div>
+                <div class="ny10-card-body">
+                  <table class="ny10-table">
+                    <thead>
+                      <tr>
+                        <th>异常现象</th>
+                        <th>常见原因</th>
+                        <th>优先调整建议</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${issueRows}
+                    </tbody>
+                  </table>
+                  <p class="ny10-note">注：建议按“外观 -> 流动 -> 冲击 -> VOC”顺序做迭代评估，避免一次性多变量改动导致判断失真。</p>
+                </div>
+              </section>
+            </div>
+          `;
+
+          renderOverlayPage(body, "heat14-overlay", "heat-page-14-v3", pageHtml);
+        };
+
+        const patchCurrentPage = () => {
+          const pageNum = getCurrentPageNumber();
+          const page = getCurrentA4Page();
+          if (!pageNum || !page) return;
+
+          if (pageNum === 2) {
+            patchCompanyProfile(page);
+            return;
+          }
+
+          if (pageNum === 3) {
+            patchSuppliersPage(page);
+            return;
+          }
+
+          if (pageNum === 4) {
+            patchCatalogPage(page, {
+              key: "catalog-page-4-v1",
+              headerTitle: "PC & PC Alloys / ABS & ASA",
+              headerSubtitle: "Product Portfolio",
+              sections: page4Sections
+            });
+            return;
+          }
+
+          if (pageNum === 5) {
+            patchCatalogPage(page, {
+              key: "catalog-page-5-v1",
+              headerTitle: "PA & PBT / PMMA & PLA & PETG",
+              headerSubtitle: "Product Portfolio",
+              sections: page5Sections
+            });
+            return;
+          }
+
+          if (pageNum === 6) {
+            patchMbsIntroPage(page);
+            return;
+          }
+
+          if (pageNum === 7) {
+            patchMbsComparePage(page);
+            return;
+          }
+
+          if (pageNum === 8) {
+            patchAcrPcPbtPage(page);
+            return;
+          }
+
+          if (pageNum === 9) {
+            patchTransparentTougheningPage(page);
+            return;
+          }
+
+          if (pageNum === 10) {
+            patchNylonPbtPage(page);
+            return;
+          }
+
+          if (pageNum === 11) {
+            patchMergedPage11(page);
+            return;
+          }
+
+          if (pageNum === 12) {
+            patchHeatPage13(page);
+            return;
+          }
+
+          if (pageNum === 13) {
+            patchHeatPage14(page);
+            return;
+          }
+
+          if (pageNum === 14) {
+            restoreOriginalPageView(page);
+          }
+        };
+
+        const start = () => {
+          let isPatching = false;
+          let scheduled = false;
+
+          const runPatches = () => {
+            if (isPatching) return;
+            isPatching = true;
+            try {
+              patchCurrentPage();
+            } finally {
+              isPatching = false;
+            }
+          };
+
+          const schedulePatches = () => {
+            if (scheduled) return;
+            scheduled = true;
+            window.requestAnimationFrame(() => {
+              scheduled = false;
+              runPatches();
+            });
+          };
+
+          runPatches();
+          const root = document.getElementById("root");
+          if (!root) return;
+
+          const observer = new MutationObserver(() => {
+            if (isPatching) return;
+            schedulePatches();
+          });
+
+          observer.observe(root, { childList: true, subtree: true });
+          window.addEventListener("beforeunload", () => observer.disconnect(), { once: true });
+          window.addEventListener("keydown", schedulePatches, { passive: true });
+          window.addEventListener("click", schedulePatches, { passive: true });
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", start, { once: true });
+        } else {
+          start();
+        }
+      })();
+    </script>
+  </body>
+</html>
