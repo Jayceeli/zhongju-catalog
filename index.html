@@ -918,6 +918,45 @@
         border: 1px solid #f0abfc;
       }
 
+      /* 对比表格专用样式 */
+      .compare-table .col-grade {
+        font-weight: 700;
+        color: #9f1515;
+        font-size: 0.62rem;
+        white-space: nowrap;
+      }
+
+      .compare-table .col-application {
+        color: #374151;
+        font-weight: 600;
+      }
+
+      .compare-table .col-property {
+        color: #4b5563;
+      }
+
+      .compare-table .col-difference {
+        color: #059669;
+        font-weight: 500;
+        background: #f0fdf4;
+        border-radius: 0.25rem;
+      }
+
+      .grade-table-section.tone-mbs .compare-table .col-difference {
+        background: #eff6ff;
+        color: #2563eb;
+      }
+
+      .grade-table-section.tone-acr .compare-table .col-difference {
+        background: #f5f3ff;
+        color: #7c3aed;
+      }
+
+      .grade-table-section.tone-asa .compare-table .col-difference {
+        background: #fdf4ff;
+        color: #c026d3;
+      }
+
       /* 表格响应式 */
       @media (max-width: 640px) {
         .grade-table {
@@ -929,6 +968,9 @@
         }
         .grade-table .col-feature {
           max-width: 8rem;
+        }
+        .compare-table .col-grade {
+          font-size: 0.56rem;
         }
       }
 
@@ -1753,103 +1795,85 @@
           ]
         ];
 
-        // ASA产品表格数据 - 参考原手册
-        const asaGradeTableData = [
+        // 精炼版牌号对比表格数据 - 同类型集成，突出差异
+        const mbsCompareTableData = [
           {
-            supplier: "KANEKA",
-            grade: "M130/M140",
-            category: "通用ASA",
-            categoryClass: "tone-asa",
-            feature: "高光泽，高冲击，用于汽车用ASA",
-            package: "20 KG/BAG"
-          },
-          {
-            supplier: "KANEKA",
-            grade: "M190",
-            category: "PC/ASA合金",
-            categoryClass: "tone-pc",
-            feature: "优异的冲击性能，用于PC/ASA合金",
-            package: "10 KG/BAG"
-          },
-          {
-            supplier: "KANEKA",
-            grade: "MR-301",
-            category: "高亮黑ASA",
-            categoryClass: "tone-asa",
-            feature: "优异的着色性及表面光泽，可制备高亮黑ASA合金",
-            package: "20 KG/BAG"
-          },
-          {
-            supplier: "FOCUSPOLY",
-            grade: "FJLH-600",
-            category: "高光ASA",
-            categoryClass: "tone-asa",
-            feature: "含硅氧烷橡胶，极佳的着色性，用于制备高光ASA",
-            package: "25 KG/BAG"
-          }
-        ];
-
-        // MBS牌号表格数据
-        const mbsGradeTableData = [
-          {
-            supplier: "KANEKA",
             grade: "M-701",
-            category: "通用增韧",
-            categoryClass: "tone-mbs",
-            feature: "经典工程塑料增韧牌号，工艺窗口友好，适合通用PC与PC/PBT体系",
-            package: "20 KG/BAG"
+            application: "通用PC/PC-ABS增韧",
+            property: "性能均衡，工艺窗口友好",
+            difference: "入门级首选，导入效率最高"
           },
           {
-            supplier: "KANEKA",
             grade: "M-711",
-            category: "低温增韧",
-            categoryClass: "tone-mbs",
-            feature: "低温韧性保持更好，适合寒冷环境工况(-30°C及以下)",
-            package: "20 KG/BAG"
+            application: "低温冲击要求(-30°C及以下)",
+            property: "低温韧性保持优异",
+            difference: "比M-701低温冲击+20%"
           },
           {
-            supplier: "KANEKA",
             grade: "M-722",
-            category: "高冲击",
-            categoryClass: "tone-mbs",
-            feature: "冲击提升效率高，适合高抗冲要求的PC/ABS体系",
-            package: "20 KG/BAG"
+            application: "高抗冲PC/ABS体系",
+            property: "冲击提升效率高",
+            difference: "常温冲击最优，性价比路线"
           },
           {
-            supplier: "KANEKA",
             grade: "M-724",
-            category: "阻燃专用",
-            categoryClass: "tone-mbs",
-            feature: "兼顾冲击、阻燃和耐化学，可平衡综合性能",
-            package: "20 KG/BAG"
+            application: "阻燃PC/ABS",
+            property: "兼顾冲击、阻燃、耐化学",
+            difference: "阻燃体系专用，平衡性最佳"
           },
           {
-            supplier: "KANEKA",
+            grade: "M-726",
+            application: "再生料体系稳定化",
+            property: "r-PC(/ABS)冲击提升明显",
+            difference: "支持降添加量，再生料专用"
+          },
+          {
             grade: "M-732",
-            category: "耐水解",
-            categoryClass: "tone-mbs",
-            feature: "耐水解表现更优，适合长期稳定性要求高湿热环境",
-            package: "20 KG/BAG"
+            application: "高湿热/长期寿命",
+            property: "耐水解表现更优",
+            difference: "湿热环境首选，长期稳定性最佳"
           }
         ];
 
-        // ACR牌号表格数据
-        const acrGradeTableData = [
+        const acrCompareTableData = [
           {
-            supplier: "中聚",
-            grade: "M577",
-            category: "ACR升级型",
-            categoryClass: "tone-acr",
-            feature: "FM40改良版本，PC体系中冲击、耐热和低黄变表现更优，适合外观与耐候并重场景",
-            package: "20 KG/BAG"
+            grade: "FM40",
+            application: "通用PC/PC-PBT增韧",
+            property: "工艺窗口友好，流动性好",
+            difference: "成本敏感项目首选，MFR 18.3"
           },
           {
-            supplier: "中聚",
-            grade: "FM40",
-            category: "ACR通用型",
-            categoryClass: "tone-acr",
-            feature: "经典工程塑料增韧牌号，工艺窗口友好，适合通用PC与PC/PBT体系",
-            package: "20 KG/BAG"
+            grade: "M577",
+            application: "外观与耐候并重场景",
+            property: "低黄变，耐热窗口宽",
+            difference: "FM40升级版，YI 0.9 vs 4.5，耐热+50°C"
+          }
+        ];
+
+        const asaCompareTableData = [
+          {
+            grade: "M130/M140",
+            application: "汽车用ASA",
+            property: "高光泽，高冲击",
+            difference: "通用级，58%橡胶含量"
+          },
+          {
+            grade: "M190",
+            application: "PC/ASA合金",
+            property: "优异冲击性能",
+            difference: "合金专用，相容性优化"
+          },
+          {
+            grade: "MR-301",
+            application: "高亮黑ASA合金",
+            property: "着色性、表面光泽优异",
+            difference: "高亮黑专用，黑度最佳"
+          },
+          {
+            grade: "FJLH-600",
+            application: "高光ASA制品",
+            property: "含硅氧烷橡胶，极佳着色性",
+            difference: "68%橡胶含量，高光场景专用"
           }
         ];
 
@@ -2823,20 +2847,19 @@
           renderOverlayPage(body, "ny10-overlay", "ny10-page-v2", pageHtml);
         };
 
-        // 渲染牌号表格
-        const renderGradeTable = (data, title, subtitle, toneClass = "tone-pc") => {
+        // 渲染精炼版牌号对比表格 - 突出差异
+        const renderCompareTable = (data, title, subtitle, toneClass = "tone-mbs") => {
           const rows = data.map(item => `
             <tr>
-              <td class="col-supplier">${escapeHtml(item.supplier)}</td>
               <td class="col-grade">${escapeHtml(item.grade)}</td>
-              <td><span class="grade-category-tag ${item.categoryClass}">${escapeHtml(item.category)}</span></td>
-              <td class="col-feature">${escapeHtml(item.feature)}</td>
-              <td class="col-package">${escapeHtml(item.package)}</td>
+              <td class="col-application">${escapeHtml(item.application)}</td>
+              <td class="col-property">${escapeHtml(item.property)}</td>
+              <td class="col-difference">${escapeHtml(item.difference)}</td>
             </tr>
           `).join("");
 
           return `
-            <section class="grade-table-section">
+            <section class="grade-table-section ${toneClass}">
               <div class="grade-table-section-header">
                 <div>
                   <h3 class="grade-table-section-title">${escapeHtml(title)}</h3>
@@ -2845,14 +2868,13 @@
               </div>
               <div class="grade-table-section-body">
                 <div class="grade-table-container">
-                  <table class="grade-table">
+                  <table class="grade-table compare-table">
                     <thead>
                       <tr>
-                        <th>厂家</th>
-                        <th>牌号</th>
-                        <th>类别</th>
-                        <th>特征和应用</th>
-                        <th>包装</th>
+                        <th style="width:14%">牌号</th>
+                        <th style="width:26%">应用方向</th>
+                        <th style="width:28%">物性特点</th>
+                        <th style="width:32%">差异/选型要点</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -2865,30 +2887,29 @@
           `;
         };
 
-        // 牌号表格展示页面 - 参考原手册ASA产品表格
+        // 牌号对比表格页面 - 精炼版，突出差异
         const patchGradeTablePage = (page) => {
           const body = page.querySelector(".flex-1");
           if (!body) return;
 
           const headerTitle = page.querySelector(".header-title");
           const headerSubtitle = page.querySelector(".header-subtitle");
-          if (headerTitle) headerTitle.textContent = "牌号速查表";
-          if (headerSubtitle) headerSubtitle.textContent = "Product Grade Reference";
+          if (headerTitle) headerTitle.textContent = "牌号选型对比表";
+          if (headerSubtitle) headerSubtitle.textContent = "Grade Comparison & Selection Guide";
 
           const pageHtml = `
             <div class="manual-page grade-table-page">
-              <p class="manual-lead tone-pc">
-                本页以表格形式汇总主要产品牌号，便于快速查阅厂家、类别、特征及包装信息。
-                同一产品系列的不同牌号在同一表格中呈现，方便横向对比选型。
+              <p class="manual-lead tone-mbs">
+                同一类型产品的不同牌号集成对比，按应用方向、物性特点、差异要点快速选型。
               </p>
 
-              ${renderGradeTable(asaGradeTableData, "ASA 产品系列", "ASA Product Series", "tone-asa")}
-              ${renderGradeTable(mbsGradeTableData, "MBS 增韧剂系列", "MBS Toughening Agents", "tone-mbs")}
-              ${renderGradeTable(acrGradeTableData, "ACR 增韧剂系列", "ACR Toughening Agents", "tone-acr")}
+              ${renderCompareTable(mbsCompareTableData, "MBS 增韧剂系列", "M-701 / M-711 / M-722 / M-724 / M-726 / M-732", "tone-mbs")}
+              ${renderCompareTable(acrCompareTableData, "ACR 增韧剂系列", "FM40 / M577 对比", "tone-acr")}
+              ${renderCompareTable(asaCompareTableData, "ASA 产品系列", "M130/M140 / M190 / MR-301 / FJLH-600", "tone-asa")}
             </div>
           `;
 
-          renderOverlayPage(body, "grade-table-overlay", "grade-table-page-v1", pageHtml);
+          renderOverlayPage(body, "grade-table-overlay", "grade-table-page-v2", pageHtml);
         };
 
         const patchMergedPage11 = (page) => {
